@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oyeri — Guide votre avenir</title>
+<meta name="description" content="Oyeri — Plateforme d'orientation et d'insertion professionnelle pour les jeunes d'Afrique et d'Europe francophone. Commence gratuitement.">
+<meta name="theme-color" content="#1a3a4a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta property="og:title" content="Oyeri — Guide votre avenir">
+<meta property="og:description" content="Tu ne sais pas quelle voie choisir ? Parle avec un professionnel de ton secteur en 48h. Commence gratuitement.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#4BBFB0;--teal-d:#3aa99a;--teal-l:#e8f8f6;--navy:#1a3a4a;--text:#2d3748;--muted:#718096;--bg:#f9fafb;--white:#fff;--border:#e2e8f0}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white)}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:66px;display:flex;align-items:center}
+.nav-in{max-width:1200px;margin:auto;width:100%;padding:0 24px;display:flex;align-items:center;gap:8px}
+.logo-img{height:44px;cursor:pointer}
+.nav-links{display:flex;align-items:center;gap:2px;margin-left:auto;flex-wrap:nowrap}
+.nav-links a{padding:7px 11px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:500;color:var(--text);transition:all .2s;white-space:nowrap;cursor:pointer}
+.nav-links a:hover{background:var(--teal-l);color:var(--teal-d)}
+.nav-links a.active{color:var(--teal-d);font-weight:600}
+.nbtn{padding:8px 16px;background:var(--teal);color:#fff;border:none;border-radius:9px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;transition:all .2s;font-family:'DM Sans',sans-serif;white-space:nowrap;margin-left:6px}
+.nbtn:hover{background:var(--teal-d);transform:translateY(-1px)}
+.nbtn.out{background:transparent;color:var(--teal);border:2px solid var(--teal)}
+.nbtn.out:hover{background:var(--teal);color:#fff}
+/* SECTIONS */
+.sec{display:none;padding-top:66px}.sec.on{display:block}
+/* FREEMIUM STRIP */
+.fstrip{background:linear-gradient(90deg,var(--navy),#1a5a4a,var(--navy));padding:12px 24px;text-align:center}
+.fstrip p{color:#a8eae4;font-size:13px}
+.fstrip strong{color:#fff}
+.fstrip button{padding:6px 16px;background:var(--teal);border:none;border-radius:7px;color:#fff;font-size:12px;font-weight:700;cursor:pointer;margin-left:14px;font-family:'DM Sans',sans-serif}
+/* HERO */
+.hero{background:linear-gradient(135deg,#1a3a4a,#2d6a5f 50%,#4BBFB0);min-height:calc(100vh - 66px);display:flex;align-items:center;padding:60px 24px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;opacity:.04;background:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='1' fill='%23fff'/%3E%3C/svg%3E")}
+.hero-in{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
+.hero h1{font-family:'Sora',sans-serif;font-size:44px;font-weight:800;color:#fff;line-height:1.1;margin-bottom:16px}
+.hero h1 span{color:#a8eae4}
+.hero p{font-size:16px;color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:28px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{padding:14px 28px;background:#fff;color:var(--navy);border:none;border-radius:11px;font-size:14px;font-weight:700;cursor:pointer;transition:all .25s;font-family:'DM Sans',sans-serif;display:inline-flex;align-items:center;gap:7px}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.btn-secondary{padding:14px 28px;background:rgba(255,255,255,.15);color:#fff;border:2px solid rgba(255,255,255,.3);border-radius:11px;font-size:14px;font-weight:600;cursor:pointer;transition:all .25s;font-family:'DM Sans',sans-serif}
+.btn-secondary:hover{background:rgba(255,255,255,.25)}
+/* BADGES */
+.geo-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.geo-badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:50px;padding:4px 12px;color:rgba(255,255,255,.85);font-size:12px}
+/* COMMON */
+.wrap{max-width:1200px;margin:auto}
+.s-hd{text-align:center;margin-bottom:48px}
+.s-hd h2{font-family:'Sora',sans-serif;font-size:34px;font-weight:700;color:var(--navy);margin-bottom:10px}
+.s-hd p{font-size:15px;color:var(--muted);max-width:540px;margin:auto;line-height:1.6}
+.btn-t{padding:9px 18px;background:var(--teal);color:#fff;border:none;border-radius:9px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif}
+.btn-t:hover{background:var(--teal-d);transform:translateY(-1px)}
+/* FEATURES */
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.feat-card{text-align:center;padding:28px 18px;border-radius:18px;border:1px solid var(--border);transition:all .3s;background:var(--white)}
+.feat-card:hover{border-color:var(--teal);transform:translateY(-4px);box-shadow:0 4px 20px rgba(75,191,176,.12)}
+.feat-icon{width:56px;height:56px;background:var(--teal-l);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:24px}
+.feat-card h3{font-family:'Sora',sans-serif;font-weight:600;font-size:14px;color:var(--navy);margin-bottom:6px}
+.feat-card p{font-size:13px;color:var(--muted);line-height:1.5}
+/* HOW */
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.how-grid::before{content:'';position:absolute;top:36px;left:8%;right:8%;height:2px;background:linear-gradient(90deg,var(--teal),var(--teal-d));z-index:0}
+.how-card{text-align:center;position:relative;z-index:1}
+.how-ico{width:72px;height:72px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:28px;border:4px solid #fff;box-shadow:0 0 0 3px rgba(75,191,176,.2)}
+.how-card h3{font-family:'Sora',sans-serif;font-weight:600;font-size:14px;color:var(--navy);margin-bottom:6px}
+.how-card p{font-size:12px;color:var(--muted)}
+/* PACKS */
+.packs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pack{border-radius:20px;overflow:hidden;border:1px solid var(--border);transition:all .3s;background:var(--white)}
+.pack:hover,.pack.hot{border-color:var(--teal);transform:translateY(-5px);box-shadow:0 8px 32px rgba(26,58,74,.1)}
+.pack.free{border-color:#f59e0b;box-shadow:0 0 0 2px rgba(245,158,11,.15)}
+.pack-h{height:130px;display:flex;align-items:center;justify-content:space-between;padding:16px 18px;position:relative;overflow:hidden}
+.ph1{background:linear-gradient(135deg,#1a3a4a,#2d6a5f)}.ph2{background:linear-gradient(135deg,#2d6a5f,#4BBFB0)}.ph3{background:linear-gradient(135deg,#4BBFB0,#88d8d0)}.ph4{background:linear-gradient(135deg,#8B6914,#c9972d)}
+.p-badge{background:rgba(255,255,255,.9);color:var(--navy);font-family:'Sora',sans-serif;font-weight:700;font-size:12px;padding:4px 12px;border-radius:8px}
+.p-badge span{color:var(--teal)}
+.p-free-badge{position:absolute;top:10px;right:10px;background:#f59e0b;color:#fff;font-size:10px;font-weight:800;padding:3px 10px;border-radius:50px}
+.pack-b{padding:22px}
+.pack-tag{font-style:italic;font-size:12px;color:var(--muted);margin-bottom:14px;line-height:1.5}
+.pack-fl{list-style:none;margin-bottom:20px}
+.pack-fl li{display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:12px;color:var(--text);line-height:1.4;border-bottom:1px solid var(--bg)}
+.pack-fl li:last-child{border:none}
+.pack-fl li::before{content:'✓';color:var(--teal);font-weight:700;flex-shrink:0;margin-top:1px}
+.pack-ft{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border)}
+.pack-price{font-family:'Sora',sans-serif;font-weight:800;font-size:26px;color:var(--navy)}
+.pack-price.free-price{color:#f59e0b}
+/* TESTS */
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.t-card{border-radius:18px;overflow:hidden;border:2px solid var(--border);transition:all .3s;cursor:pointer}
+.t-card:hover{border-color:var(--teal);transform:translateY(-4px);box-shadow:0 8px 28px rgba(26,58,74,.1)}
+.t-head{padding:24px;text-align:center}
+.th1{background:linear-gradient(135deg,#1a3a4a,#2d6a5f)}.th2{background:linear-gradient(135deg,#2d6a5f,#4BBFB0)}.th3{background:linear-gradient(135deg,#4a1a3a,#8d3a6a)}
+.t-ico{font-size:38px;margin-bottom:10px}
+.t-head h3{font-family:'Sora',sans-serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:4px}
+.t-head p{font-size:12px;color:rgba(255,255,255,.75)}
+.t-body{padding:18px}
+.t-metas{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.tm{padding:3px 9px;border-radius:50px;font-size:11px;font-weight:600}
+.tm-free{background:#d1fae5;color:#065f46}.tm-time{background:var(--teal-l);color:var(--teal-d)}.tm-qs{background:#fef3c7;color:#b45309}
+.t-desc{font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:14px}
+/* FICHES */
+.f-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.f-card{background:var(--white);border-radius:16px;overflow:hidden;border:1px solid var(--border);cursor:pointer;transition:all .3s}
+.f-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(26,58,74,.1);border-color:var(--teal)}
+.f-hd{padding:20px;text-align:center}
+.f-ico{font-size:36px;margin-bottom:6px}
+.f-hd h3{font-family:'Sora',sans-serif;font-size:12px;font-weight:700;color:#fff;line-height:1.3}
+.f-ft{padding:10px 14px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.f-ft span{font-size:11px;color:var(--muted)}
+.f-arr{color:var(--teal);font-weight:700}
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.testi-card{background:var(--white);border-radius:20px;overflow:hidden;border:1px solid var(--border);transition:all .3s}
+.testi-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(26,58,74,.12)}
+.testi-head{padding:22px;display:flex;align-items:center;gap:12px;position:relative}
+.testi-av{width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.testi-body{padding:18px 22px 22px}
+.testi-body p{font-size:13px;color:var(--muted);line-height:1.7;font-style:italic;margin-bottom:14px}
+.testi-ft{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--border);font-size:11px;color:var(--muted)}
+/* IMPACT STATS */
+.impact-stats{background:linear-gradient(135deg,var(--navy),var(--teal-d));border-radius:22px;padding:32px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;margin-top:32px}
+.is-n{font-family:'Sora',sans-serif;font-size:38px;font-weight:800;color:#fff}
+.is-l{font-size:13px;color:rgba(255,255,255,.7);margin-top:4px}
+/* PROS */
+.pros-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pro-card{background:var(--white);border-radius:18px;padding:24px;border:1px solid var(--border);transition:all .3s;text-align:center}
+.pro-card:hover{border-color:var(--teal);transform:translateY(-4px);box-shadow:0 8px 28px rgba(26,58,74,.1)}
+.pro-av{width:70px;height:70px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:28px;border:3px solid var(--teal-l)}
+.pro-name{font-family:'Sora',sans-serif;font-weight:700;font-size:15px;color:var(--navy);margin-bottom:3px}
+.pro-title{font-size:12px;color:var(--teal);font-weight:600;margin-bottom:4px}
+.pro-flag{font-size:11px;color:var(--muted);margin-bottom:10px}
+.pro-stats{display:flex;gap:8px;justify-content:center;margin-bottom:14px;flex-wrap:wrap}
+.pro-stat{background:var(--teal-l);border-radius:50px;padding:3px 10px;font-size:10px;font-weight:600;color:var(--teal-d)}
+.verified{display:inline-flex;align-items:center;gap:4px;background:#d1fae5;color:#065f46;font-size:10px;font-weight:700;padding:2px 8px;border-radius:50px}
+/* FORMS */
+.jform{display:flex;flex-direction:column;gap:11px}
+.fg{display:flex;flex-direction:column;gap:4px}
+.fg label{font-size:12px;font-weight:500;color:var(--text)}
+.fg input,.fg select,.fg textarea{padding:10px 13px;border:1px solid var(--border);border-radius:9px;font-size:13px;color:var(--text);font-family:'DM Sans',sans-serif;outline:none;transition:border .2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--teal)}
+.fg textarea{resize:vertical;min-height:80px}
+.f2c{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+/* MODAL */
+.modal{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.5);align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex}
+.modal-in{background:var(--white);border-radius:22px;padding:36px;max-width:600px;width:100%;max-height:88vh;overflow-y:auto;position:relative}
+.modal-in h2{font-family:'Sora',sans-serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.modal-sub{font-size:13px;color:var(--muted);margin-bottom:20px}
+.close-btn{position:absolute;top:14px;right:14px;background:var(--bg);border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:16px;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center}
+.prog-w{background:var(--border);border-radius:50px;height:5px;margin-bottom:20px}
+.prog-f{background:var(--teal);height:5px;border-radius:50px;transition:width .4s}
+.q-item h4{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:10px;line-height:1.4}
+.q-opts{display:flex;flex-direction:column;gap:8px}
+.q-opt{padding:10px 14px;border:2px solid var(--border);border-radius:10px;cursor:pointer;font-size:13px;transition:all .2s}
+.q-opt:hover,.q-opt.sel{border-color:var(--teal);background:var(--teal-l);color:var(--teal-d);font-weight:500}
+.res-box{text-align:center;padding:28px;background:var(--teal-l);border-radius:14px;margin-top:16px}
+.res-box .big{font-size:56px;margin-bottom:12px}
+.res-box h3{font-family:'Sora',sans-serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:7px}
+.res-box p{font-size:13px;color:var(--muted);line-height:1.5}
+.res-careers{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-top:12px}
+.res-careers span{padding:4px 12px;background:var(--teal);color:#fff;border-radius:50px;font-size:12px}
+.modal-nav{display:flex;gap:9px;justify-content:flex-end;margin-top:20px}
+.btn-back{padding:10px 22px;background:var(--bg);border:1px solid var(--border);color:var(--text);border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif}
+.btn-nxt{padding:10px 22px;background:var(--teal);border:none;color:#fff;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif}
+/* FICHE MODAL */
+.f-modal{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.5);align-items:center;justify-content:center;padding:16px}
+.f-modal.open{display:flex}
+.f-modal-in{background:var(--white);border-radius:22px;padding:36px;max-width:680px;width:100%;max-height:88vh;overflow-y:auto;position:relative}
+.f-wm{display:flex;align-items:center;gap:9px;margin-bottom:16px;padding-bottom:14px;border-bottom:2px solid var(--teal-l)}
+.f-wm img{height:28px}
+.f-wm span{font-size:10px;color:var(--muted);font-weight:500}
+.f-modal-in h2{font-family:'Sora',sans-serif;font-size:24px;font-weight:800;color:var(--navy);margin-bottom:3px}
+.f-sub{font-size:13px;color:var(--teal);font-weight:600;margin-bottom:16px}
+.f-sal{background:linear-gradient(135deg,var(--navy),var(--teal-d));border-radius:11px;padding:14px;color:#fff;margin-bottom:14px}
+.f-sal h4{font-family:'Sora',sans-serif;font-size:12px;font-weight:700;margin-bottom:8px}
+.sal-row{display:flex;gap:12px}
+.sal-it{flex:1;background:rgba(255,255,255,.12);border-radius:7px;padding:9px;text-align:center}
+.sal-n{font-family:'Sora',sans-serif;font-size:15px;font-weight:800}
+.sal-l{font-size:9px;opacity:.7;margin-top:2px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.f-bl{background:var(--bg);border-radius:11px;padding:14px}
+.f-bl h4{font-family:'Sora',sans-serif;font-size:12px;font-weight:700;color:var(--navy);margin-bottom:7px}
+.f-bl ul{list-style:none}
+.f-bl ul li{font-size:12px;color:var(--muted);padding:3px 0;display:flex;align-items:flex-start;gap:6px;line-height:1.4}
+.f-bl ul li::before{content:'→';color:var(--teal);font-weight:700;flex-shrink:0}
+.f-bl p{font-size:12px;color:var(--muted);line-height:1.5}
+/* RDV */
+.rdv-in{max-width:860px;margin:auto}
+.rdv-steps{display:flex;gap:0;margin-bottom:36px}
+.rdv-step{flex:1;text-align:center;position:relative}
+.rdv-step::after{content:'';position:absolute;top:19px;left:50%;right:-50%;height:2px;background:var(--border);z-index:0}
+.rdv-step:last-child::after{display:none}
+.rdv-step .sc{width:38px;height:38px;border-radius:50%;background:var(--border);color:var(--muted);font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 7px;position:relative;z-index:1;transition:all .3s;font-size:13px}
+.rdv-step.done .sc{background:var(--teal);color:#fff}
+.rdv-step.act .sc{background:var(--navy);color:#fff}
+.rdv-step .sl{font-size:11px;color:var(--muted);font-weight:500}
+.rdv-step.act .sl,.rdv-step.done .sl{color:var(--navy)}
+.rdv-box{background:var(--white);border-radius:22px;padding:32px;border:1px solid var(--border)}
+.rdv-box h2{font-family:'Sora',sans-serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.rdv-box .sub{color:var(--muted);font-size:13px;margin-bottom:20px}
+.pro-list{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.pro-it{display:flex;align-items:center;gap:11px;padding:12px;border:2px solid var(--border);border-radius:12px;cursor:pointer;transition:all .2s}
+.pro-it:hover,.pro-it.sel{border-color:var(--teal);background:var(--teal-l)}
+.pro-av2{width:42px;height:42px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.pro-it h4{font-size:13px;font-weight:500;color:var(--navy);margin-bottom:1px}
+.pro-it p{font-size:11px;color:var(--teal);font-weight:500}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.cal-hd{text-align:center;font-size:10px;font-weight:600;color:var(--muted);padding:5px 0}
+.cal-d{text-align:center;padding:7px;border-radius:7px;cursor:pointer;font-size:12px;transition:all .2s}
+.cal-d:hover{background:var(--teal-l)}
+.cal-d.av{color:var(--navy);font-weight:500}
+.cal-d.sel{background:var(--teal);color:#fff;font-weight:600;border-radius:50%}
+.cal-d.em{visibility:hidden}
+.time-slots{display:flex;gap:9px;margin-top:16px;flex-wrap:wrap}
+.tsl{padding:8px 16px;border:2px solid var(--border);border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;transition:all .2s}
+.tsl:hover,.tsl.sel{border-color:var(--teal);background:var(--teal-l);color:var(--teal-d)}
+.rdv-nav{display:flex;gap:9px;justify-content:flex-end;margin-top:20px}
+.success-box{text-align:center;padding:36px}
+.success-box .bchk{font-size:60px;margin-bottom:14px}
+.success-box h2{font-family:'Sora',sans-serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.success-box p{font-size:13px;color:var(--muted);max-width:380px;margin:auto;line-height:1.5}
+/* LOGIN / DASH */
+.login-wrap{min-height:calc(100vh - 66px);background:var(--bg);display:flex;align-items:center;justify-content:center;padding:32px 16px}
+.login-box{width:100%;max-width:420px;background:var(--white);border-radius:22px;padding:40px;border:1px solid var(--border);box-shadow:0 8px 32px rgba(26,58,74,.1)}
+.dash-sec{padding:80px 24px;background:var(--bg);min-height:calc(100vh - 66px)}
+.dash-in{max-width:1200px;margin:auto;display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:start}
+.dash-nav{background:var(--white);border-radius:18px;padding:20px;border:1px solid var(--border);position:sticky;top:80px}
+.dash-nav h3{font-family:'Sora',sans-serif;font-size:11px;font-weight:600;color:var(--muted);margin-bottom:12px;text-transform:uppercase;letter-spacing:.4px}
+.dl{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;font-size:12px;font-weight:500;color:var(--text);cursor:pointer;transition:all .2s;margin-bottom:3px}
+.dl:hover,.dl.on{background:var(--teal-l);color:var(--teal-d)}
+.dl .i{font-size:15px}
+.dash-c{display:flex;flex-direction:column;gap:18px}
+.d-greet{background:linear-gradient(135deg,var(--navy),var(--teal-d));border-radius:18px;padding:24px;color:#fff}
+.d-greet h2{font-family:'Sora',sans-serif;font-size:22px;font-weight:700;margin-bottom:4px}
+.d-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.d-stat{background:var(--white);border-radius:14px;padding:20px;border:1px solid var(--border);text-align:center}
+.d-n{font-family:'Sora',sans-serif;font-size:28px;font-weight:800;color:var(--teal)}
+.d-l{font-size:11px;color:var(--muted);margin-top:3px}
+.d-panel{background:var(--white);border-radius:18px;padding:22px;border:1px solid var(--border)}
+.d-panel h3{font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:16px}
+.rdv-it{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}
+.rdv-it:last-child{border:none}
+.rdv-dt{width:44px;height:44px;background:var(--teal-l);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.rdv-dy{font-family:'Sora',sans-serif;font-weight:700;font-size:15px;color:var(--teal-d)}
+.rdv-mo{font-size:8px;color:var(--teal-d);font-weight:500;text-transform:uppercase}
+.rdv-it h4{font-size:13px;font-weight:500;color:var(--navy);margin-bottom:2px}
+.rdv-it p{font-size:11px;color:var(--muted)}
+.rdv-bg{margin-left:auto;padding:3px 9px;border-radius:50px;font-size:10px;font-weight:600}
+.bg-ok{background:#d1fae5;color:#065f46}.bg-w{background:#fef3c7;color:#b45309}
+.msg-l{display:flex;flex-direction:column;gap:9px}
+.msg-it{display:flex;gap:10px;padding:10px;border-radius:10px;background:var(--bg);cursor:pointer;transition:background .2s}
+.msg-it:hover{background:var(--teal-l)}
+.msg-av{width:36px;height:36px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;flex-shrink:0;font-size:13px}
+.msg-it h4{font-size:13px;font-weight:500;color:var(--navy);margin-bottom:2px}
+.msg-it p{font-size:11px;color:var(--muted)}
+.msg-dot{width:7px;height:7px;background:var(--teal);border-radius:50%;margin-left:auto;margin-top:4px;flex-shrink:0}
+/* REJOINDRE NOUS */
+.join-sec{padding:80px 24px;background:var(--white)}
+.join-cards{max-width:900px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.jc{border-radius:22px;overflow:hidden;border:2px solid var(--border);transition:all .3s}
+.jc:hover{border-color:var(--teal);box-shadow:0 8px 28px rgba(26,58,74,.1)}
+.jc-h{padding:28px}
+.jch-pro{background:linear-gradient(135deg,var(--navy),var(--teal-d))}.jch-team{background:linear-gradient(135deg,#4a1a3a,#8d3a6a)}
+.jc-h h2{font-family:'Sora',sans-serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:6px}
+.jc-h p{font-size:12px;color:rgba(255,255,255,.8)}
+.jc-h .bi{font-size:40px;margin-bottom:12px}
+.jc-b{padding:22px}
+.jl{list-style:none;margin-bottom:18px}
+.jl li{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);font-size:12px;color:var(--text)}
+.jl li:last-child{border:none}
+.jl li::before{content:'→';color:var(--teal);font-weight:700;flex-shrink:0}
+/* CHARTER */
+.charter-in{max-width:760px;margin:auto}
+.ch-art{margin-bottom:28px}
+.ch-art h3{font-family:'Sora',sans-serif;font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px;padding-left:12px;border-left:4px solid var(--teal)}
+.ch-art p{font-size:13px;color:var(--muted);line-height:1.8}
+/* PAYMENT */
+.pay-methods{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.pay-card{border-radius:14px;border:2px solid var(--border);padding:18px;text-align:center;transition:all .25s;cursor:pointer}
+.pay-card:hover,.pay-card.sel{border-color:var(--teal);background:var(--teal-l)}
+.pay-ic{font-size:28px;margin-bottom:7px}
+.pay-card h4{font-family:'Sora',sans-serif;font-size:12px;font-weight:600;color:var(--navy);margin-bottom:2px}
+.pay-card p{font-size:11px;color:var(--muted)}
+/* PARTNERS */
+.part-types{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
+.pt2{border-radius:18px;overflow:hidden;border:1px solid var(--border);transition:all .3s}
+.pt2:hover{border-color:var(--teal);transform:translateY(-4px);box-shadow:0 8px 28px rgba(26,58,74,.1)}
+.pt2-h{padding:24px}
+.pth1{background:linear-gradient(135deg,#1a4a2a,#3a8a5a)}.pth2{background:linear-gradient(135deg,#1a2a4a,#3a5a8a)}.pth3{background:linear-gradient(135deg,#4a1a1a,#8a3a3a)}
+.pt2-h h3{font-family:'Sora',sans-serif;font-size:17px;font-weight:700;color:#fff;margin-bottom:4px}
+.pt2-h p{font-size:11px;color:rgba(255,255,255,.8)}
+.pt2-h .big{font-size:32px;margin-bottom:9px;display:block}
+.pt2-b{padding:18px}
+.pl{list-style:none}
+.pl li{padding:6px 0;border-bottom:1px solid var(--border);font-size:12px;color:var(--text);display:flex;align-items:center;gap:6px}
+.pl li:last-child{border:none}
+.pl li::before{content:'◆';color:var(--teal);font-size:7px}
+/* CTA + FOOTER */
+.cta-b{background:linear-gradient(135deg,var(--navy),var(--teal-d));padding:72px 24px;text-align:center}
+.cta-b h2{font-family:'Sora',sans-serif;font-size:36px;font-weight:800;color:#fff;margin-bottom:10px}
+.cta-b p{font-size:16px;color:rgba(255,255,255,.8);margin-bottom:28px}
+footer{background:var(--navy);color:rgba(255,255,255,.7);padding:44px 24px 24px}
+.fg-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:36px}
+.f-logo img{height:38px;margin-bottom:10px}
+.f-sub-text{font-size:12px;line-height:1.6}
+.f-col h4{font-family:'Sora',sans-serif;font-weight:600;font-size:12px;color:#fff;margin-bottom:12px}
+.f-col a{display:block;color:rgba(255,255,255,.6);text-decoration:none;font-size:12px;margin-bottom:6px;transition:color .2s;cursor:pointer}
+.f-col a:hover{color:#fff}
+.nl-inp{display:flex;gap:7px;margin-top:9px}
+.nl-inp input{flex:1;padding:8px 11px;border-radius:7px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);color:#fff;font-size:12px;outline:none;font-family:'DM Sans',sans-serif}
+.nl-inp input::placeholder{color:rgba(255,255,255,.4)}
+.nl-inp button{padding:8px 13px;background:var(--teal);color:#fff;border:none;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif}
+.f-bot{max-width:1200px;margin:24px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;font-size:11px;align-items:center;flex-wrap:wrap;gap:8px}
+/* RGPD BANNER */
+#rgpdBanner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--navy);color:#fff;padding:16px 24px;box-shadow:0 -4px 20px rgba(0,0,0,.2)}
+.rgpd-in{max-width:1200px;margin:auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.rgpd-in p{flex:1;min-width:200px;font-size:12px;color:rgba(255,255,255,.75);line-height:1.5;margin:0}
+.rgpd-btns{display:flex;gap:10px;flex-shrink:0}
+/* MISC */
+.hidden{display:none!important}
+.tags-in{display:flex;flex-wrap:wrap;gap:6px;padding:8px;border:1px solid var(--border);border-radius:8px;min-height:40px}
+.cv-up{border:2px dashed var(--border);border-radius:12px;padding:28px;text-align:center;cursor:pointer;transition:all .2s;margin-bottom:12px}
+.cv-up:hover{border-color:var(--teal);background:var(--teal-l)}
+/* RESPONSIVE */
+@media(max-width:1024px){.feat-grid,.how-grid{grid-template-columns:repeat(2,1fr)}.f-grid{grid-template-columns:repeat(3,1fr)}.fg-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.hero-in{grid-template-columns:1fr}.hero-in>div:last-child{display:none}.hero h1{font-size:30px}.packs-grid,.t-grid,.testi-grid,.pros-grid,.part-types{grid-template-columns:1fr}.f-grid{grid-template-columns:repeat(2,1fr)}.feat-grid,.how-grid,.pay-methods,.d-stats{grid-template-columns:1fr 1fr}.dash-in,.join-cards,.f-row{grid-template-columns:1fr}.nav-links a{display:none}.impact-stats{grid-template-columns:1fr 1fr}.fg-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-in">
+    <img class="logo-img" id="navLogo" alt="Oyeri" onclick="go('home')">
+    <div class="nav-links">
+      <a id="nl-home" href="javascript:void(0)" onclick="go('home');return false;" class="active">Accueil</a>
+      <a id="nl-offres" href="javascript:void(0)" onclick="go('offres');return false;">Nos offres</a>
+      <a id="nl-tests" href="javascript:void(0)" onclick="go('tests');return false;">Tests gratuits</a>
+      <a id="nl-fiches" href="javascript:void(0)" onclick="go('fiches');return false;">Métiers</a>
+      <a id="nl-rejoindre" href="javascript:void(0)" onclick="go('rejoindre-nous');return false;" style="color:var(--teal-d);font-weight:600">Pourquoi nous rejoindre ?</a>
+      <a id="nl-about" href="javascript:void(0)" onclick="go('about');return false;">À propos</a>
+      <a id="nl-charter" href="javascript:void(0)" onclick="go('charter');return false;">Charte & RGPD</a>
+    </div>
+    <a class="nbtn out" href="javascript:void(0)" onclick="go('login');return false;">Se connecter</a>
+    <a class="nbtn" href="javascript:void(0)" onclick="go('rdv');return false;">Prendre RDV</a>
+  </div>
+</nav>
+
+<!-- ══ ACCUEIL ══ -->
+<div id="home" class="sec on">
+
+<!-- FREEMIUM STRIP -->
+<div class="fstrip">
+  <p>🎁 <strong>Commence gratuitement</strong> — Pack Découverte offert + Tests d'orientation + Fiches métiers
+    <button onclick="go('offres')">Commencer →</button>
+  </p>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-in">
+    <div>
+      <div class="geo-badges">
+        <span class="geo-badge">🇬🇦 Gabon</span>
+        <span class="geo-badge">🌍 Afrique francophone</span>
+        <span class="geo-badge">🇫🇷 France</span>
+        <span class="geo-badge">🇧🇪 Belgique</span>
+        <span class="geo-badge">🇨🇭 Suisse</span>
+      </div>
+      <h1>Tu ne sais pas<br>quelle voie <span>choisir ?</span></h1>
+      <p>Parle avec un professionnel de ton secteur en 48h. Tests gratuits, fiches métiers, accompagnement personnalisé — pour les jeunes d'Afrique et d'Europe francophone.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="go('offres')">🎁 Commencer gratuitement</button>
+        <button class="btn-secondary" onclick="go('tests')">Faire un test →</button>
+      </div>
+    </div>
+    <div>
+      <svg viewBox="0 0 420 320" style="width:100%;max-width:420px;display:block;margin:auto" xmlns="http://www.w3.org/2000/svg">
+        <rect x="30" y="200" width="360" height="10" rx="4" fill="rgba(255,255,255,.15)"/>
+        <rect x="80" y="148" width="180" height="55" rx="6" fill="#1a2a3a"/>
+        <rect x="82" y="150" width="176" height="51" rx="5" fill="#0d1f2d"/>
+        <rect x="86" y="154" width="168" height="43" rx="3" fill="#1e4d6b"/>
+        <rect x="90" y="157" width="80" height="37" rx="3" fill="#164060"/>
+        <ellipse cx="130" cy="168" rx="10" ry="11" fill="#e8b89a"/>
+        <rect x="120" y="176" width="20" height="14" rx="4" fill="#2d6a9f"/>
+        <rect x="113" y="178" width="34" height="10" rx="3" fill="#2d6a9f"/>
+        <circle cx="255" cy="159" r="3" fill="#4BBFB0"/>
+        <text x="172" y="175" text-anchor="middle" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.5)">MENTOR OYERI</text>
+        <rect x="82" y="204" width="176" height="6" rx="3" fill="#0d1f2d"/>
+        <rect x="115" y="207" width="108" height="2" rx="1" fill="rgba(255,255,255,.1)"/>
+        <ellipse cx="230" cy="155" rx="16" ry="18" fill="#c8956b"/>
+        <rect x="210" y="168" width="38" height="38" rx="10" fill="#4BBFB0"/>
+        <rect x="204" y="174" width="14" height="22" rx="6" fill="#c8956b"/>
+        <rect x="222" y="198" width="14" height="20" rx="5" fill="#1a3a4a"/>
+        <rect x="238" y="200" width="10" height="18" rx="5" fill="#1a3a4a"/>
+        <path d="M220 195 Q195 200 180 202" stroke="#c8956b" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M248 195 Q260 202 270 203" stroke="#c8956b" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <ellipse cx="180" cy="204" rx="9" ry="6" fill="#c8956b"/>
+        <ellipse cx="270" cy="205" rx="8" ry="5" fill="#c8956b"/>
+        <rect x="30" y="90" width="112" height="32" rx="10" fill="rgba(255,255,255,.15)"/>
+        <path d="M55 122 L50 134 L65 122Z" fill="rgba(255,255,255,.15)"/>
+        <text x="86" y="110" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">Quelle filière</text>
+        <text x="86" y="121" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">me conseilles-tu ?</text>
+        <rect x="270" y="55" width="122" height="42" rx="10" fill="#4BBFB0" opacity=".85"/>
+        <path d="M285 97 L280 110 L295 97Z" fill="#4BBFB0" opacity=".85"/>
+        <text x="331" y="74" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">Avec ton profil,</text>
+        <text x="331" y="85" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">je recommande le</text>
+        <text x="331" y="95" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#fff">Pack Orientation+ !</text>
+        <circle cx="60" cy="50" r="14" fill="rgba(75,191,176,.2)" stroke="rgba(75,191,176,.4)" stroke-width="1"/>
+        <text x="60" y="56" text-anchor="middle" font-family="sans-serif" font-size="14">🎯</text>
+        <circle cx="360" cy="155" r="14" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+        <text x="360" y="161" text-anchor="middle" font-family="sans-serif" font-size="14">⭐</text>
+        <path d="M214 144 Q215 132 230 131 Q245 131 246 144" stroke="#1a3a4a" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <rect x="210" y="142" width="8" height="10" rx="3" fill="#1a3a4a"/>
+        <rect x="242" y="142" width="8" height="10" rx="3" fill="#1a3a4a"/>
+        <rect x="30" y="265" width="115" height="22" rx="11" fill="rgba(75,191,176,.2)" stroke="rgba(75,191,176,.4)" stroke-width="1"/>
+        <text x="87" y="280" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#a8eae4">✓ 200+ jeunes accompagnés</text>
+        <rect x="158" y="265" width="98" height="22" rx="11" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+        <text x="207" y="280" text-anchor="middle" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,.8)">⭐ 4.9/5 satisfaction</text>
+        <rect x="270" y="265" width="112" height="22" rx="11" fill="rgba(75,191,176,.15)" stroke="rgba(75,191,176,.35)" stroke-width="1"/>
+        <text x="326" y="280" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#a8eae4">🌍 Afrique &amp; Europe</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- POURQUOI OYERI -->
+<div style="padding:80px 24px;background:var(--white)">
+  <div class="wrap">
+    <div class="s-hd"><h2>Pourquoi Oyeri ?</h2><p>Une plateforme née d'Afrique, pensée pour les jeunes qui méritent un accompagnement de qualité — sans réseau privilégié.</p></div>
+    <div class="feat-grid">
+      <div class="feat-card"><div class="feat-icon">👤</div><h3>Des professionnels vérifiés</h3><p>Des experts, coachs et mentors vérifiés par Oyeri, disponibles dans votre domaine d'intérêt.</p></div>
+      <div class="feat-card"><div class="feat-icon">🎯</div><h3>Conseils personnalisés</h3><p>Chaque accompagnement est adapté à votre profil, vos ambitions et votre contexte géographique.</p></div>
+      <div class="feat-card"><div class="feat-icon">🆓</div><h3>Commence gratuitement</h3><p>Pack Découverte offert, tests gratuits, fiches métiers accessibles sans inscription.</p></div>
+      <div class="feat-card"><div class="feat-icon">🌍</div><h3>Afrique & Europe</h3><p>Gabon, Cameroun, Côte d'Ivoire, France, Belgique, Suisse — un accompagnement sans frontières.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- COMMENT ÇA MARCHE -->
+<div style="padding:80px 24px;background:var(--teal-l)">
+  <div class="wrap">
+    <div class="s-hd"><h2>Comment ça marche ?</h2><p>En 4 étapes simples, trouvez votre voie.</p></div>
+    <div class="how-grid">
+      <div class="how-card"><div class="how-ico">🧪</div><h3>1. Fais ton test gratuit</h3><p>Personnalité, aptitudes, intérêts — en 5 min</p></div>
+      <div class="how-card"><div class="how-ico">📦</div><h3>2. Choisis ton pack</h3><p>Découverte (gratuit) ou Clarté / Orientation+</p></div>
+      <div class="how-card"><div class="how-ico">📅</div><h3>3. Réserve un RDV</h3><p>Choisis un professionnel vérifié et un créneau</p></div>
+      <div class="how-card"><div class="how-ico">💬</div><h3>4. Construis ton avenir</h3><p>Plan d'action concret + suivi personnalisé</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- TÉMOIGNAGES -->
+<div style="padding:80px 24px;background:var(--white)">
+  <div class="wrap">
+    <div class="s-hd"><h2>Ils ont changé de trajectoire</h2><p>Des histoires vraies. Chaque témoignage prouve que la bonne orientation peut tout changer.</p></div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-head" style="background:linear-gradient(135deg,#1a3a4a,#2d6a5f)">
+          <div class="testi-av">👨🏾‍💻</div>
+          <div><div style="font-family:'Sora',sans-serif;font-weight:700;color:#fff;font-size:15px">Dany K.</div><div style="font-size:12px;color:rgba(255,255,255,.7)">Libreville → Développeur Web</div></div>
+          <div style="position:absolute;top:14px;right:14px;background:var(--teal);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:50px">Pack Clarté</div>
+        </div>
+        <div class="testi-body">
+          <p>"J'hésitais entre comptabilité et informatique depuis 2 ans. En 30 minutes avec un développeur senior Oyeri, tout s'est éclairé. Aujourd'hui je suis en formation web avec mon premier stage signé."</p>
+          <div class="testi-ft"><span>📅 3 mois après la session</span><span style="color:#f59e0b">★★★★★</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-head" style="background:linear-gradient(135deg,#4a1a3a,#8d3a6a)">
+          <div class="testi-av">👩🏾‍⚕️</div>
+          <div><div style="font-family:'Sora',sans-serif;font-weight:700;color:#fff;font-size:15px">Jupsie M.</div><div style="font-size:12px;color:rgba(255,255,255,.7)">Douala → Sciences Infirmières</div></div>
+          <div style="position:absolute;top:14px;right:14px;background:rgba(255,255,255,.2);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:50px">Pack Orientation+</div>
+        </div>
+        <div class="testi-body">
+          <p>"Je tiens à remercier l'équipe Oyeri pour son formidable accompagnement. J'ai découvert les sciences infirmières et convaincu ma famille avec des arguments solides. Merci pour tout le travail pour la jeunesse."</p>
+          <div class="testi-ft"><span>📅 Admise en IFSI</span><span style="color:#f59e0b">★★★★★</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-head" style="background:linear-gradient(135deg,#1a4a2a,#3a8a5a)">
+          <div class="testi-av">👨🏾‍🎓</div>
+          <div><div style="font-family:'Sora',sans-serif;font-weight:700;color:#fff;font-size:15px">Arnaud T.</div><div style="font-size:12px;color:rgba(255,255,255,.7)">Brazzaville → Master Finance Paris</div></div>
+          <div style="position:absolute;top:14px;right:14px;background:rgba(255,255,255,.2);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:50px">Pack Campus France</div>
+        </div>
+        <div class="testi-body">
+          <p>"Les démarches Campus France me semblaient impossibles depuis Brazzaville. Oyeri m'a guidé étape par étape. J'ai été admis en Master Finance à Paris. Un accompagnement qui change vraiment une vie."</p>
+          <div class="testi-ft"><span>📅 Admis en Master 2</span><span style="color:#f59e0b">★★★★★</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="impact-stats">
+      <div><div class="is-n">200+</div><div class="is-l">Jeunes accompagnés</div></div>
+      <div><div class="is-n" style="color:#4BBFB0">94%</div><div class="is-l">Taux de satisfaction</div></div>
+      <div><div class="is-n">15+</div><div class="is-l">Professionnels vérifiés</div></div>
+      <div><div class="is-n" style="color:#4BBFB0">5</div><div class="is-l">Pays couverts</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- NOS PROFESSIONNELS VÉRIFIÉS -->
+<div style="padding:80px 24px;background:var(--teal-l)">
+  <div class="wrap">
+    <div class="s-hd"><h2>Nos professionnels vérifiés</h2><p>Des experts engagés, vérifiés par Oyeri, disponibles pour t'accompagner.</p></div>
+    <div class="pros-grid">
+      <div class="pro-card">
+        <div class="pro-av">👩🏾‍💼</div>
+        <div class="pro-name">Theresa Webb</div>
+        <div class="pro-title">Ingénieure Géotechnicienne</div>
+        <div class="pro-flag">🇬🇦 Gabon · 🇫🇷 France</div>
+        <div class="pro-stats"><span class="pro-stat">23 sessions</span><span class="pro-stat">★★★★★ 5.0</span></div>
+        <div style="margin-bottom:12px"><span class="verified">✓ Profil Oyeri vérifié</span></div>
+        <button class="btn-t" style="width:100%" onclick="go('rdv')">Prendre RDV</button>
+      </div>
+      <div class="pro-card">
+        <div class="pro-av">🧑🏾‍⚕️</div>
+        <div class="pro-name">Ralph Eddards</div>
+        <div class="pro-title">Psychologue & Conseiller</div>
+        <div class="pro-flag">🇫🇷 France</div>
+        <div class="pro-stats"><span class="pro-stat">18 sessions</span><span class="pro-stat">★★★★★ 4.9</span></div>
+        <div style="margin-bottom:12px"><span class="verified">✓ Profil Oyeri vérifié</span></div>
+        <button class="btn-t" style="width:100%" onclick="go('rdv')">Prendre RDV</button>
+      </div>
+      <div class="pro-card">
+        <div class="pro-av">👩🏾‍💻</div>
+        <div class="pro-name">Aurélie Bongo</div>
+        <div class="pro-title">Experte Campus France</div>
+        <div class="pro-flag">🇫🇷 France · 🇬🇦 Gabon</div>
+        <div class="pro-stats"><span class="pro-stat">44 sessions</span><span class="pro-stat">★★★★★ 5.0</span></div>
+        <div style="margin-bottom:12px"><span class="verified">✓ Profil Oyeri vérifié</span></div>
+        <button class="btn-t" style="width:100%" onclick="go('rdv')">Prendre RDV</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-b">
+  <h2>Votre avenir mérite mieux que des suppositions</h2>
+  <p>Commence gratuitement avec le Pack Découverte — sans engagement, sans carte bancaire.</p>
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+    <button class="btn-primary" onclick="go('offres')">🎁 Pack Découverte gratuit</button>
+    <button class="btn-secondary" onclick="go('rdv')">📅 Prendre un RDV</button>
+  </div>
+</div>
+
+<footer>
+  <div class="fg-grid">
+    <div><div class="f-logo"><img id="footLogo" alt="Oyeri"></div><div style="font-size:16px;margin:7px 0">🇬🇦 🌍 🇫🇷 🇧🇪 🇨🇭</div><p class="f-sub-text">Plateforme d'orientation et d'insertion professionnelle — <strong style="color:rgba(255,255,255,.85)">Afrique & Europe francophone</strong>.</p></div>
+    <div class="f-col"><h4>Navigation</h4><a href="javascript:void(0)" onclick="go('home');return false;">Accueil</a><a href="javascript:void(0)" onclick="go('offres');return false;">Nos offres</a><a href="javascript:void(0)" onclick="go('tests');return false;">Tests gratuits</a><a href="javascript:void(0)" onclick="go('fiches');return false;">Fiches métiers</a><a href="javascript:void(0)" onclick="go('about');return false;">À propos</a></div>
+    <div class="f-col"><h4>Liens utiles</h4><a href="javascript:void(0)" onclick="go('rejoindre-nous');return false;">Pourquoi nous rejoindre ?</a><a href="javascript:void(0)" onclick="go('join');return false;">Nous rejoindre</a><a href="javascript:void(0)" onclick="go('partners');return false;">Partenaires</a><a href="javascript:void(0)" onclick="go('jobs');return false;">Emploi / Stage</a><a href="javascript:void(0)" onclick="go('payment');return false;">Paiement</a><a href="javascript:void(0)" onclick="go('charter');return false;">Charte & RGPD</a></div>
+    <div class="f-col"><h4>Newsletter</h4><p style="font-size:11px">Conseils, ressources et offres exclusives</p><div class="nl-inp"><input type="email" placeholder="votre@email.com"><button>OK</button></div><p style="margin-top:10px;font-size:11px">📸 @oyeri_conseil<br>✉️ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cda2b4a8bfa4aab8a4a9a8bba2b9bfa8acbba8a3a4bf8daaa0aca4a1e3aea2a0">[email&#160;protected]</a><br>📞 +241 74 13 23 24</p></div>
+  </div>
+  <div class="f-bot"><span>© OYERI CONSEIL 2025 — Tous droits réservés</span><span style="font-size:11px;color:rgba(255,255,255,.4)">RGPD · Charte informatique · Mentions légales</span></div>
+</footer>
+</div>
+
+<!-- ══ OFFRES ══ -->
+<div id="offres" class="sec">
+<div style="padding:80px 24px;background:var(--white)">
+  <div class="wrap">
+    <div class="s-hd">
+      <h2>Nos offres d'accompagnement</h2>
+      <p>Du gratuit au complet — une offre pour chaque situation. <strong style="color:#f59e0b">Le Pack Découverte est offert</strong> pour tous les nouveaux inscrits.</p>
+    </div>
+    <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:2px solid #f59e0b;border-radius:18px;padding:20px 24px;margin-bottom:36px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+      <div style="font-size:32px">🎁</div>
+      <div style="flex:1"><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:16px;color:#92400e;margin-bottom:4px">Pack Découverte — 100% gratuit au lancement !</div><p style="font-size:13px;color:#b45309">Pour tout nouveau compte créé, le Pack Découverte est offert — 1 rendez-vous de 30 min avec un professionnel, une fiche métier et des conseils personnalisés. Sans carte bancaire.</p></div>
+      <button class="btn-t" onclick="go('rdv')" style="background:#f59e0b;padding:12px 22px;font-size:14px">Réserver mon RDV gratuit →</button>
+    </div>
+    <div class="packs-grid">
+
+      <!-- DÉCOUVERTE GRATUIT -->
+      <div class="pack free">
+        <div class="pack-h ph1" style="height:130px;display:flex;align-items:center;justify-content:space-between;padding:16px 18px">
+          <div class="p-badge">Pack <span>Découverte</span></div>
+          <div class="p-free-badge">GRATUIT</div>
+          <svg viewBox="0 0 90 80" width="86" height="76" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="45" cy="22" r="11" fill="#e8b89a"/><rect x="36" y="30" width="18" height="20" rx="5" fill="rgba(255,255,255,.4)"/>
+            <path d="M36 37 Q28 38 24 42" stroke="#e8b89a" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M54 37 Q62 38 66 42" stroke="#e8b89a" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="24" cy="45" rx="6" ry="4" fill="#e8b89a"/><ellipse cx="66" cy="45" rx="6" ry="4" fill="#e8b89a"/>
+            <text x="18" y="15" font-family="sans-serif" font-size="14" fill="rgba(255,255,255,.6)">?</text>
+            <text x="60" y="12" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,.5)">?</text>
+            <text x="72" y="22" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,.4)">?</text>
+          </svg>
+        </div>
+        <div class="pack-b">
+          <p class="pack-tag">Tu te sens perdu ? Un premier contact avec un professionnel pour explorer un métier.</p>
+          <ul class="pack-fl">
+            <li>1 RDV de 30 min avec un professionnel vérifié</li>
+            <li>1 fiche métier offerte (ton choix)</li>
+            <li>Questions guidées par un conseiller</li>
+            <li>Récapitulatif et conseils personnalisés</li>
+            <li>Accès aux 3 tests d'orientation gratuits</li>
+          </ul>
+          <div class="pack-ft">
+            <span class="pack-price free-price">Gratuit</span>
+            <button class="btn-t" onclick="go('rdv')" style="background:#f59e0b">Commencer →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLARTÉ -->
+      <div class="pack">
+        <div class="pack-h ph2" style="height:130px;display:flex;align-items:center;justify-content:space-between;padding:16px 18px">
+          <div class="p-badge">Pack <span>Clarté</span></div>
+          <svg viewBox="0 0 90 80" width="86" height="76" xmlns="http://www.w3.org/2000/svg">
+            <path d="M45 70 L45 52 L28 32" stroke="rgba(255,255,255,.6)" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M45 52 L62 32" stroke="rgba(255,255,255,.6)" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <rect x="8" y="20" width="32" height="14" rx="3" fill="rgba(255,255,255,.3)"/><text x="24" y="30" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#fff">Voie A</text>
+            <rect x="52" y="20" width="32" height="14" rx="3" fill="rgba(255,255,255,.3)"/><text x="68" y="30" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#fff">Voie B</text>
+            <circle cx="45" cy="58" r="8" fill="#e8b89a"/><rect x="38" y="64" width="14" height="14" rx="4" fill="rgba(255,255,255,.4)"/>
+            <circle cx="62" cy="55" r="8" fill="rgba(255,255,255,.15)" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+            <text x="62" y="59" text-anchor="middle" font-family="sans-serif" font-size="11">💡</text>
+          </svg>
+        </div>
+        <div class="pack-b">
+          <p class="pack-tag">Tu hésites entre deux voies ? Clarifie ton orientation et repars avec un plan concret.</p>
+          <ul class="pack-fl">
+            <li>2 RDV avec 2 professionnels différents</li>
+            <li>1 fiche parcours personnalisée</li>
+            <li>Accès aux 3 tests d'orientation inclus</li>
+            <li>Accès à 2 ressources exclusives Oyeri</li>
+            <li>Canal d'échange avec ton conseiller</li>
+          </ul>
+          <div class="pack-ft">
+            <span class="pack-price">30€</span>
+            <button class="btn-t" onclick="go('rdv')">Choisir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ORIENTATION+ -->
+      <div class="pack hot">
+        <div style="background:var(--teal);color:#fff;text-align:center;padding:5px;font-size:11px;font-weight:700">⭐ LE PLUS COMPLET</div>
+        <div class="pack-h ph3" style="height:130px;display:flex;align-items:center;justify-content:space-between;padding:16px 18px">
+          <div class="p-badge">Pack <span>Orientation+</span></div>
+          <svg viewBox="0 0 90 80" width="86" height="76" xmlns="http://www.w3.org/2000/svg">
+            <path d="M45 65 L38 52 L38 32 Q45 18 52 32 L52 52 Z" fill="rgba(255,255,255,.6)"/>
+            <circle cx="45" cy="33" r="6" fill="rgba(255,255,255,.85)"/><circle cx="45" cy="33" r="3" fill="rgba(75,191,176,.7)"/>
+            <path d="M38 48 L30 58 L38 54Z" fill="rgba(255,255,255,.4)"/><path d="M52 48 L60 58 L52 54Z" fill="rgba(255,255,255,.4)"/>
+            <path d="M40 65 Q45 75 50 65 Q47 72 45 75 Q43 72 40 65Z" fill="rgba(255,200,50,.7)"/>
+            <circle cx="20" cy="20" r="2" fill="rgba(255,255,255,.7)"/><circle cx="70" cy="15" r="1.5" fill="rgba(255,255,255,.6)"/><circle cx="75" cy="35" r="2" fill="rgba(255,255,255,.5)"/>
+          </svg>
+        </div>
+        <div class="pack-b">
+          <p class="pack-tag">Accompagnement complet pour définir un plan d'action clair et te lancer avec confiance.</p>
+          <ul class="pack-fl">
+            <li>3 RDV avec 3 professionnels de domaines variés</li>
+            <li>Fiche parcours + plan d'action complet</li>
+            <li>Accès aux 3 tests d'orientation inclus</li>
+            <li>Suivi personnalisé pendant 1 semaine</li>
+            <li>Canal d'échange dédié</li>
+          </ul>
+          <div class="pack-ft">
+            <span class="pack-price">40€</span>
+            <button class="btn-t" onclick="go('rdv')">Choisir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RÉINSERTION -->
+      <div class="pack">
+        <div class="pack-h ph4" style="height:130px;display:flex;align-items:center;justify-content:space-between;padding:16px 18px">
+          <div class="p-badge">Pack <span>Réinsertion</span></div>
+          <svg viewBox="0 0 90 80" width="86" height="76" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="45" cy="55" r="10" fill="#e8b89a"/><rect x="37" y="63" width="16" height="14" rx="5" fill="rgba(255,255,255,.4)"/>
+            <path d="M45 46 L45 35" stroke="#e8b89a" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="45" cy="32" rx="6" ry="5" fill="#e8b89a"/>
+            <circle cx="45" cy="22" r="9" fill="rgba(255,200,50,.4)" stroke="rgba(255,200,50,.6)" stroke-width="1.5"/>
+            <text x="45" y="27" text-anchor="middle" font-family="sans-serif" font-size="12">★</text>
+            <rect x="60" y="62" width="22" height="5" rx="2" fill="rgba(255,255,255,.25)"/>
+            <rect x="64" y="52" width="18" height="5" rx="2" fill="rgba(255,255,255,.2)"/>
+            <rect x="68" y="42" width="14" height="5" rx="2" fill="rgba(255,255,255,.15)"/>
+          </svg>
+        </div>
+        <div class="pack-b">
+          <p class="pack-tag">Pour les jeunes sortis du système scolaire — une voie vers une nouvelle opportunité.</p>
+          <ul class="pack-fl">
+            <li>1 entretien avec un pro du secteur informel</li>
+            <li>Accès aux 3 tests d'orientation inclus</li>
+            <li>Conseils personnalisés de réinsertion</li>
+            <li>Orientation vers formations sans diplôme</li>
+            <li>Mentorat et suivi de 2 semaines</li>
+          </ul>
+          <div class="pack-ft">
+            <span class="pack-price">40€</span>
+            <button class="btn-t" onclick="go('rdv')">Choisir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRÊT EMPLOI -->
+      <div class="pack">
+        <div class="pack-h ph2" style="background:linear-gradient(135deg,#1a4a2a,#3a8a5a);height:130px;display:flex;align-items:center;justify-content:space-between;padding:16px 18px">
+          <div class="p-badge">Pack <span>Prêt Emploi</span></div>
+          <svg viewBox="0 0 90 80" width="86" height="76" xmlns="http://www.w3.org/2000/svg">
+            <rect x="52" y="12" width="30" height="40" rx="3" fill="rgba(255,255,255,.5)"/>
+            <rect x="55" y="16" width="22" height="2" rx="1" fill="rgba(0,0,0,.2)"/>
+            <rect x="55" y="20" width="18" height="2" rx="1" fill="rgba(0,0,0,.15)"/>
+            <rect x="55" y="24" width="20" height="2" rx="1" fill="rgba(0,0,0,.15)"/>
+            <circle cx="60" cy="14" r="5" fill="#e8b89a"/>
+            <circle cx="56" cy="46" r="8" fill="rgba(75,191,176,.7)"/>
+            <path d="M50 46 L54 51 L62 41" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="28" cy="30" r="10" fill="#e8b89a"/>
+            <rect x="18" y="40" width="20" height="24" rx="5" fill="rgba(255,255,255,.5)"/>
+            <path d="M28 40 L26 48 L28 52 L30 48 Z" fill="rgba(75,191,176,.7)"/>
+          </svg>
+        </div>
+        <div class="pack-b">
+          <p class="pack-tag">Présente-toi comme un pro — décroche ta place sur le marché du travail.</p>
+          <ul class="pack-fl">
+            <li>Diagnostic de ton profil professionnel</li>
+            <li>Refonte complète du CV</li>
+            <li>Rédaction lettre de motivation</li>
+            <li>Simulation d'entretien avec feedback</li>
+            <li>Coaching d'expression et posture</li>
+          </ul>
+          <div class="pack-ft">
+            <span class="pack-price">45€</span>
+            <button class="btn-t" onclick="go('rdv')">Choisir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CAMPUS FRANCE -->
+      <div class="pack">
+        <div class="pack-h ph1" style="background:linear-gradient(135deg,#1a2a4a,#2d5a9a);height:130px;display:flex;align-items:center;justify-content:space-between;padding:16px 18px">
+          <div class="p-badge">Pack <span>Campus France</span></div>
+          <svg viewBox="0 0 90 80" width="86" height="76" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="45" cy="42" r="28" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.4)" stroke-width="1.5"/>
+            <ellipse cx="45" cy="42" rx="12" ry="28" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1"/>
+            <path d="M17 42 Q31 38 45 42 Q59 46 73 42" stroke="rgba(255,255,255,.25)" stroke-width="1" fill="none"/>
+            <circle cx="32" cy="38" r="3" fill="#009e60"/>
+            <path d="M32 35 L32 22" stroke="#fff" stroke-width="1.2"/>
+            <rect x="33" y="22" width="8" height="5" rx="1" fill="rgba(255,255,255,.7)"/>
+            <circle cx="55" cy="34" r="3" fill="#002395"/>
+            <path d="M55 31 L55 16" stroke="#fff" stroke-width="1.2"/>
+            <rect x="56" y="16" width="9" height="5" rx="1" fill="rgba(255,255,255,.7)"/>
+            <path d="M25 22 L48 28 L50 25 Q52 20 55 22 L52 28 L54 36 L50 34 L48 28 L28 36Z" fill="rgba(255,255,255,.7)"/>
+          </svg>
+        </div>
+        <div class="pack-b">
+          <p class="pack-tag">Études en France depuis l'Afrique — accompagnement complet des démarches Campus France.</p>
+          <ul class="pack-fl">
+            <li>Aide inscription Campus France</li>
+            <li>Vérification et préparation des documents</li>
+            <li>Choix des formations adaptées à ton profil</li>
+            <li>CV + lettre de motivation en français</li>
+            <li>Simulation entretien Campus France</li>
+          </ul>
+          <div class="pack-ft">
+            <span class="pack-price">106,99€</span>
+            <button class="btn-t" onclick="go('rdv')">Choisir</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="cta-b"><h2>Pas sûr du bon pack ?</h2><p>Commence par le Pack Découverte gratuit — ton conseiller t'orientera vers la meilleure option.</p><button class="btn-primary" onclick="go('rdv')">🎁 Pack Découverte — Gratuit</button></div>
+</div>
+
+<!-- ══ TESTS GRATUITS ══ -->
+<div id="tests" class="sec">
+<div style="padding:80px 24px;background:var(--white)">
+  <div class="wrap">
+    <div class="s-hd"><h2>Tests d'orientation gratuits</h2><p>Inclus dans tous les packs. Fais-les maintenant, gratuitement et sans inscription.</p></div>
+    <div class="t-grid">
+      <div class="t-card" onclick="openTest('personnalite')">
+        <div class="t-head th1"><div class="t-ico">🧠</div><h3>Test de personnalité</h3><p>Découvre ton profil RIASEC</p></div>
+        <div class="t-body"><div class="t-metas"><span class="tm tm-free">✓ Gratuit</span><span class="tm tm-time">⏱ 5 min</span><span class="tm tm-qs">10 questions</span></div><p class="t-desc">Identifie tes traits dominants et comprends quels environnements de travail te correspondent le mieux.</p><button class="btn-t" style="width:100%">Commencer →</button></div>
+      </div>
+      <div class="t-card" onclick="openTest('aptitudes')">
+        <div class="t-head th2"><div class="t-ico">🎯</div><h3>Test d'aptitudes</h3><p>Tes domaines de compétences</p></div>
+        <div class="t-body"><div class="t-metas"><span class="tm tm-free">✓ Gratuit</span><span class="tm tm-time">⏱ 8 min</span><span class="tm tm-qs">12 questions</span></div><p class="t-desc">Évalue tes aptitudes naturelles : logique, créativité, communication, technique, relation d'aide, gestion.</p><button class="btn-t" style="width:100%">Commencer →</button></div>
+      </div>
+      <div class="t-card" onclick="openTest('interets')">
+        <div class="t-head th3"><div class="t-ico">💼</div><h3>Intérêts professionnels</h3><p>Secteurs qui te motivent</p></div>
+        <div class="t-body"><div class="t-metas"><span class="tm tm-free">✓ Gratuit</span><span class="tm tm-time">⏱ 6 min</span><span class="tm tm-qs">10 questions</span></div><p class="t-desc">Identifie les secteurs d'activité qui t'animent vraiment pour faire des choix éclairés.</p><button class="btn-t" style="width:100%">Commencer →</button></div>
+      </div>
+    </div>
+    <div style="margin-top:28px;padding:20px;background:var(--teal-l);border-radius:16px;text-align:center;border:1px solid rgba(75,191,176,.3)">
+      <p style="font-size:14px;color:var(--navy)">✨ Ces tests sont <strong>inclus gratuitement dans tous les packs Oyeri</strong>. Après ton test, un professionnel peut analyser tes résultats et t'aider à les interpréter.</p>
+      <button class="btn-t" onclick="go('offres')" style="margin-top:12px;padding:10px 22px">Voir les packs →</button>
+    </div>
+  </div>
+</div>
+<!-- TEST MODAL -->
+<div class="modal" id="testModal">
+  <div class="modal-in">
+    <button class="close-btn" onclick="closeTest()">✕</button>
+    <h2 id="tTitle"></h2><p class="modal-sub" id="tSub"></p>
+    <div class="prog-w"><div class="prog-f" id="progBar" style="width:0%"></div></div>
+    <div id="tContent"></div>
+    <div id="tResult" class="hidden"></div>
+    <div class="modal-nav">
+      <button class="btn-back" id="prevBtn" onclick="prevQ()" style="display:none">← Précédent</button>
+      <button class="btn-back btn-nxt" id="nextBtn" onclick="nextQ()">Suivant →</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══ FICHES ══ -->
+<div id="fiches" class="sec">
+<div style="padding:80px 24px;background:var(--bg)">
+  <div class="wrap">
+    <div class="s-hd"><h2>10 Fiches Métiers</h2><p>Explore des métiers variés avec des infos concrètes : missions, formations, salaires au Gabon et en France.</p></div>
+    <div class="f-grid" id="fichesGrid"></div>
+  </div>
+</div>
+<div class="f-modal" id="ficheModal">
+  <div class="f-modal-in">
+    <button class="close-btn" onclick="closeFiche()">✕</button>
+    <div class="f-wm"><img id="fWmLogo" alt="Oyeri"><span>Fiche Métier — Oyeri Conseil 2025</span></div>
+    <div id="ficheContent"></div>
+  </div>
+</div>
+</div>
+
+<!-- ══ POURQUOI NOUS REJOINDRE ══ -->
+<div id="rejoindre-nous" class="sec">
+<div style="background:linear-gradient(135deg,#1a3a4a,#2d6a5f,#4BBFB0);padding:72px 24px;text-align:center;color:#fff">
+  <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border-radius:50px;padding:5px 16px;font-size:12px;font-weight:600;margin-bottom:16px;color:#a8eae4">🤝 Rejoignez l'écosystème Oyeri</div>
+  <h1 style="font-family:'Sora',sans-serif;font-size:38px;font-weight:800;margin-bottom:12px">Pourquoi nous rejoindre ?</h1>
+  <p style="font-size:15px;opacity:.85;max-width:540px;margin:auto;line-height:1.6">Professionnel ou structure partenaire — Oyeri vous offre une plateforme à impact humain et rayonnement international.</p>
+</div>
+<div style="background:var(--bg);padding:0 24px">
+  <div style="max-width:900px;margin:auto;display:flex;border-bottom:2px solid var(--border)">
+    <button id="tab-pro" onclick="switchJoinTab('pro')" style="flex:1;padding:16px;background:none;border:none;border-bottom:3px solid var(--teal);margin-bottom:-2px;font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:var(--teal);cursor:pointer">👔 Professionnels & Experts</button>
+    <button id="tab-part" onclick="switchJoinTab('part')" style="flex:1;padding:16px;background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-2px;font-family:'Sora',sans-serif;font-size:14px;font-weight:600;color:var(--muted);cursor:pointer">🏢 Partenaires</button>
+  </div>
+</div>
+
+<div id="panel-pro" style="padding:56px 24px;background:var(--bg)">
+  <div style="max-width:1100px;margin:auto">
+    <div style="text-align:center;margin-bottom:36px"><h2 style="font-family:'Sora',sans-serif;font-size:28px;font-weight:700;color:var(--navy);margin-bottom:8px">Vous êtes expert, coach ou mentor ?</h2><p style="font-size:14px;color:var(--muted);max-width:500px;margin:auto">Rejoignez notre réseau et accompagnez les jeunes d'Afrique et d'Europe francophone vers leur avenir.</p></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:36px">
+      <div style="background:var(--white);border-radius:18px;padding:24px;border:1px solid var(--border);text-align:center"><div style="width:58px;height:58px;background:var(--teal-l);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:26px">💰</div><h3 style="font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px">Revenus complémentaires</h3><p style="font-size:12px;color:var(--muted);line-height:1.5">Monétisez votre expertise à votre rythme. Vous définissez vos créneaux et disponibilités.</p></div>
+      <div style="background:var(--white);border-radius:18px;padding:24px;border:2px solid var(--teal);text-align:center;position:relative"><div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--teal);color:#fff;font-size:10px;font-weight:700;padding:3px 12px;border-radius:50px">⭐ AVANTAGE CLÉ</div><div style="width:58px;height:58px;background:var(--teal-l);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:26px">🌍</div><h3 style="font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px">Visibilité internationale</h3><p style="font-size:12px;color:var(--muted);line-height:1.5">Votre profil visible en Afrique et en Europe francophone. Bâtissez votre réputation d'expert.</p></div>
+      <div style="background:var(--white);border-radius:18px;padding:24px;border:1px solid var(--border);text-align:center"><div style="width:58px;height:58px;background:var(--teal-l);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:26px">❤️</div><h3 style="font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px">Impact social réel</h3><p style="font-size:12px;color:var(--muted);line-height:1.5">Chaque session change une vie. Participez à la mission Oyeri : donner à chaque jeune les mêmes chances.</p></div>
+      <div style="background:var(--white);border-radius:18px;padding:24px;border:1px solid var(--border);text-align:center"><div style="width:58px;height:58px;background:var(--teal-l);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:26px">🛠️</div><h3 style="font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px">Outils clé en main</h3><p style="font-size:12px;color:var(--muted);line-height:1.5">Agenda, messagerie, espace pro, paiements sécurisés. Concentrez-vous sur l'accompagnement.</p></div>
+      <div style="background:var(--white);border-radius:18px;padding:24px;border:1px solid var(--border);text-align:center"><div style="width:58px;height:58px;background:var(--teal-l);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:26px">🤝</div><h3 style="font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px">Communauté d'experts</h3><p style="font-size:12px;color:var(--muted);line-height:1.5">Rejoignez un réseau de professionnels engagés. Échangez, collaborez, grandissez ensemble.</p></div>
+      <div style="background:var(--white);border-radius:18px;padding:24px;border:1px solid var(--border);text-align:center"><div style="width:58px;height:58px;background:var(--teal-l);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:26px">🌟</div><h3 style="font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px">Mentor Junior</h3><p style="font-size:12px;color:var(--muted);line-height:1.5">Étudiant en fin de cursus ? Devenez mentor junior — la logique "pays d'après", tendre la main à ceux qui viennent.</p></div>
+    </div>
+    <div style="background:linear-gradient(135deg,var(--navy),var(--teal-d));border-radius:18px;padding:24px;margin-bottom:24px;text-align:center"><p style="font-size:14px;color:rgba(255,255,255,.9);font-style:italic;line-height:1.7;margin-bottom:14px">"Rejoindre Oyeri m'a permis de partager mon parcours avec des jeunes qui me ressemblent. En une session, j'ai pu changer la trajectoire de plusieurs étudiants gabonais."</p><div style="display:flex;align-items:center;justify-content:center;gap:10px"><div style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:16px">👩🏾‍💼</div><div style="text-align:left"><div style="font-family:'Sora',sans-serif;font-weight:700;color:#fff;font-size:13px">Oveh Chadrelle</div><div style="font-size:11px;color:rgba(255,255,255,.6)">Fondatrice & Ingénieure Géotechnicienne</div></div></div></div>
+    <div style="text-align:center"><button class="btn-t" onclick="go('join')" style="padding:13px 30px;font-size:14px">👔 Devenir professionnel Oyeri</button></div>
+  </div>
+</div>
+
+<div id="panel-part" style="display:none;padding:56px 24px;background:var(--bg)">
+  <div style="max-width:1100px;margin:auto">
+    <div style="text-align:center;margin-bottom:36px"><h2 style="font-family:'Sora',sans-serif;font-size:28px;font-weight:700;color:var(--navy);margin-bottom:8px">Vous êtes école, entreprise ou ONG ?</h2><p style="font-size:14px;color:var(--muted);max-width:500px;margin:auto">Devenez partenaire Oyeri et accédez à un vivier de talents à travers l'Afrique et l'Europe francophone.</p></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:36px">
+      <div style="background:var(--white);border-radius:18px;padding:24px;border:1px solid var(--border);text-align:center"><div style="width:58px;height:58px;background:#e8f4ee;border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:26px">🎓</div><h3 style="font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px">Accès à des talents qualifiés</h3><p style="font-size:12px;color:var(--muted);line-height:1.5">Recrutez des profils préparés et motivés depuis l'Afrique et l'Europe francophone.</p></div>
+      <div style="background:var(--white);border-radius:18px;padding:24px;border:2px solid var(--teal);text-align:center;position:relative"><div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--teal);color:#fff;font-size:10px;font-weight:700;padding:3px 12px;border-radius:50px">⭐ AVANTAGE CLÉ</div><div style="width:58px;height:58px;background:#e8f4ee;border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:26px">🌍</div><h3 style="font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px">Rayonnement international</h3><p style="font-size:12px;color:var(--muted);line-height:1.5">Votre organisation visible sur une plateforme panafricaine et européenne.</p></div>
+      <div style="background:var(--white);border-radius:18px;padding:24px;border:1px solid var(--border);text-align:center"><div style="width:58px;height:58px;background:#e8f4ee;border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:26px">🤲</div><h3 style="font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px">Impact RSE mesurable</h3><p style="font-size:12px;color:var(--muted);line-height:1.5">Chaque partenariat contribue à l'orientation de jeunes. Un vrai levier de responsabilité sociale.</p></div>
+    </div>
+    <div style="text-align:center"><button class="btn-t" onclick="go('partners')" style="padding:13px 30px;font-size:14px;background:linear-gradient(135deg,#1a4a2a,#3a8a5a)">🏢 Devenir partenaire Oyeri</button></div>
+  </div>
+</div>
+</div>
+
+<!-- ══ À PROPOS ══ -->
+<div id="about" class="sec">
+<div style="background:linear-gradient(135deg,var(--navy),var(--teal-d));padding:80px 24px;text-align:center;color:#fff">
+  <h1 style="font-family:'Sora',sans-serif;font-size:40px;font-weight:800;margin-bottom:12px">À propos d'Oyeri</h1>
+  <p style="font-size:16px;opacity:.85;max-width:540px;margin:auto;line-height:1.6">OYERI signifie <em>intelligence</em> — l'intelligence de faire des choix éclairés, au bon moment.</p>
+</div>
+<div style="padding:72px 24px;background:var(--bg)">
+  <div style="max-width:780px;margin:auto">
+    <div class="s-hd"><h2>Notre histoire</h2></div>
+    <div style="background:var(--white);border-radius:22px;padding:40px;border:1px solid var(--border)">
+      <div style="display:flex;align-items:center;gap:18px;margin-bottom:24px;padding:18px;background:var(--teal-l);border-radius:14px">
+        <div style="width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--teal-d));display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0">👩🏾‍💼</div>
+        <div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:18px;color:var(--navy)">Oveh Chadrelle</div><div style="font-size:13px;color:var(--teal);font-weight:600;margin-top:2px">Fondatrice d'Oyeri — Ingénieure Géotechnicienne</div><div style="font-size:12px;color:var(--muted);margin-top:3px">🇬🇦 Gabon · 🇫🇷 France</div></div>
+      </div>
+      <div style="font-family:'Sora',sans-serif;font-size:18px;font-weight:700;color:var(--teal);font-style:italic;margin-bottom:18px">« Et si j'avais été accompagnée dès le départ ? »</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.9;margin-bottom:12px">OYERI est né d'un parcours réel, celui d'<strong>Oveh Chadrelle</strong>, jeune gabonaise confrontée dès le lycée à un choix déterminant : médecine, ingénierie des mines, ou BTP. Sans repères clairs ni professionnel à qui parler, elle commence par la médecine — un métier noble, mais qui ne correspond pas à ses aptitudes profondes orientées vers l'analyse, le calcul et la logique.</p>
+      <p style="font-size:14px;color:var(--muted);line-height:1.9;margin-bottom:12px">Elle se réoriente vers les mines. Là, elle retrouve ce qui lui parle. Après sa licence, un nouveau constat s'impose : les secteurs mines et pétrole perdent en attractivité. Elle découvre alors <strong>la géotechnique</strong> — à la croisée de la géologie et du BTP — et trouve enfin sa voie.</p>
+      <p style="font-size:14px;color:var(--muted);line-height:1.9;margin-bottom:18px"><em>Ce parcours lui a révélé une réalité : avec un accompagnement dès le départ, beaucoup de détours auraient été évités.</em> <strong>C'est de cette prise de conscience qu'est né OYERI.</strong></p>
+      <div style="border-left:4px solid var(--teal);padding-left:16px;margin-bottom:16px"><p style="font-size:14px;color:var(--navy);font-style:italic;line-height:1.7">"Chaque jeune mérite un accompagnement, quel que soit son parcours. L'orientation ne devrait jamais dépendre d'un réseau privilégié ou d'un environnement familial favorisé."</p></div>
+      <p style="font-family:'Sora',sans-serif;font-weight:700;color:var(--teal);font-size:15px">OYERI ne promet pas des raccourcis. OYERI aide à construire des trajectoires. ✨</p>
+    </div>
+  </div>
+</div>
+<div style="padding:64px 24px;background:var(--white)">
+  <div style="max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center">
+    <div style="border-radius:22px;height:280px;display:flex;align-items:center;justify-content:center;font-size:64px;background:var(--teal-l)">🌍</div>
+    <div>
+      <h2 style="font-family:'Sora',sans-serif;font-size:28px;font-weight:700;color:var(--navy);margin-bottom:12px">Notre Mission & Vision</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:12px">Accompagner chaque jeune vers un projet de vie clair, concret et réalisable — en Afrique francophone et en Europe francophone.</p>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:18px">Gabon, Cameroun, Côte d'Ivoire, Sénégal, Congo, France, Belgique, Suisse — Oyeri connecte deux mondes : l'Afrique et sa diaspora, les jeunes du continent et ceux qui rêvent d'y étudier ou d'y revenir.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <div style="padding:12px;background:var(--teal-l);border-radius:10px;text-align:center"><div style="font-size:20px;margin-bottom:4px">🎯</div><div style="font-family:'Sora',sans-serif;font-size:11px;font-weight:600;color:var(--navy)">Clarté</div></div>
+        <div style="padding:12px;background:var(--teal-l);border-radius:10px;text-align:center"><div style="font-size:20px;margin-bottom:4px">🤝</div><div style="font-family:'Sora',sans-serif;font-size:11px;font-weight:600;color:var(--navy)">Bienveillance</div></div>
+        <div style="padding:12px;background:var(--teal-l);border-radius:10px;text-align:center"><div style="font-size:20px;margin-bottom:4px">⚡</div><div style="font-family:'Sora',sans-serif;font-size:11px;font-weight:600;color:var(--navy)">Impact</div></div>
+        <div style="padding:12px;background:var(--teal-l);border-radius:10px;text-align:center"><div style="font-size:20px;margin-bottom:4px">💡</div><div style="font-family:'Sora',sans-serif;font-size:11px;font-weight:600;color:var(--navy)">Innovation</div></div>
+        <div style="padding:12px;background:var(--teal-l);border-radius:10px;text-align:center"><div style="font-size:20px;margin-bottom:4px">🌱</div><div style="font-family:'Sora',sans-serif;font-size:11px;font-weight:600;color:var(--navy)">Croissance</div></div>
+        <div style="padding:12px;background:var(--teal-l);border-radius:10px;text-align:center"><div style="font-size:20px;margin-bottom:4px">🌍</div><div style="font-family:'Sora',sans-serif;font-size:11px;font-weight:600;color:var(--navy)">Inclusion</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ══ CHARTE & RGPD ══ -->
+<div id="charter" class="sec">
+<div style="background:linear-gradient(135deg,var(--navy),var(--teal-d));padding:72px 24px;text-align:center;color:#fff">
+  <div style="font-size:40px;margin-bottom:12px">🔒</div>
+  <h1 style="font-family:'Sora',sans-serif;font-size:36px;font-weight:800;margin-bottom:10px">Charte Informatique & RGPD</h1>
+  <p style="font-size:15px;opacity:.85;max-width:500px;margin:auto">Oyeri est conforme au RGPD (UE) 2016/679. Vos données vous appartiennent.</p>
+</div>
+<div style="padding:72px 24px;background:var(--white)">
+  <div class="charter-in">
+    <div style="background:var(--teal-l);border-radius:16px;padding:20px;margin-bottom:32px;text-align:center"><p style="font-size:13px;color:var(--navy)">🏛️ Conforme au <strong>RGPD (UE) 2016/679</strong> et aux lois de protection des données en Afrique francophone. Pour toute réclamation, contactez la <strong>CNIL</strong> (France) ou l'autorité compétente dans votre pays.</p></div>
+    <div class="ch-art"><h3>Article 1 — Objet de la charte</h3><p>La présente charte définit les règles d'utilisation, de sécurité et de protection des données applicables au site OYERI, à ses services et à l'ensemble des utilisateurs : jeunes, professionnels, partenaires et administrateurs. Elle vise à garantir la sécurité des informations, la confidentialité des profils, le bon usage des services et la protection des données personnelles.</p></div>
+    <div class="ch-art"><h3>Article 2 — Accès au site et création de compte</h3><p>L'accès nécessite un compte valide, des informations exactes et l'acceptation des CGU. Chaque utilisateur s'engage à choisir un mot de passe sécurisé, à ne pas le partager et à signaler toute suspicion d'accès non autorisé. Il est interdit d'usurper l'identité d'un tiers.</p></div>
+    <div class="ch-art"><h3>Article 3 — Usage autorisé</h3><p>Les jeunes utilisent Oyeri pour l'orientation, le coaching, le dépôt de CV et la réservation de séances. Les professionnels fournissent des prestations et respectent leurs engagements. Les partenaires déposent des offres et utilisent les données des candidats de façon responsable.</p></div>
+    <div class="ch-art"><h3>Article 4 — Sécurité informatique</h3><p>Oyeri met en place un chiffrement HTTPS/SSL, des sauvegardes régulières, une surveillance des accès et une protection contre les intrusions. Les utilisateurs s'engagent à ne pas contourner les systèmes de sécurité ni introduire de virus ou scripts malveillants.</p></div>
+    <div class="ch-art"><h3>Article 5 — Protection des données personnelles (RGPD)</h3><p><strong>Collecte minimale :</strong> Seules les données nécessaires au fonctionnement sont collectées. <strong>Finalité :</strong> orientation, mise en relation, réservation, candidatures. <strong>Confidentialité :</strong> les données ne sont jamais revendues à des tiers non autorisés.</p></div>
+    <div class="ch-art"><h3>Article 6 — Vos droits (RGPD Art. 15-22)</h3>
+      <p style="margin-bottom:14px">Conformément au RGPD, tout utilisateur dispose des droits suivants :</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px">
+        <div style="background:var(--teal-l);border-radius:10px;padding:12px;text-align:center"><div style="font-size:18px;margin-bottom:4px">📋</div><div style="font-size:12px;font-weight:600;color:var(--navy)">Droit d'accès</div></div>
+        <div style="background:var(--teal-l);border-radius:10px;padding:12px;text-align:center"><div style="font-size:18px;margin-bottom:4px">✏️</div><div style="font-size:12px;font-weight:600;color:var(--navy)">Rectification</div></div>
+        <div style="background:var(--teal-l);border-radius:10px;padding:12px;text-align:center"><div style="font-size:18px;margin-bottom:4px">🗑️</div><div style="font-size:12px;font-weight:600;color:var(--navy)">Effacement</div></div>
+        <div style="background:var(--teal-l);border-radius:10px;padding:12px;text-align:center"><div style="font-size:18px;margin-bottom:4px">📤</div><div style="font-size:12px;font-weight:600;color:var(--navy)">Portabilité</div></div>
+        <div style="background:var(--teal-l);border-radius:10px;padding:12px;text-align:center"><div style="font-size:18px;margin-bottom:4px">🚫</div><div style="font-size:12px;font-weight:600;color:var(--navy)">Opposition</div></div>
+        <div style="background:var(--teal-l);border-radius:10px;padding:12px;text-align:center"><div style="font-size:18px;margin-bottom:4px">⏸️</div><div style="font-size:12px;font-weight:600;color:var(--navy)">Limitation</div></div>
+      </div>
+      <p style="font-size:13px;color:var(--muted)">Pour exercer vos droits : <a href="/cdn-cgi/l/email-protection#214e584453484654484544574e5553444057444f485361464c40484d0f424e4c" style="color:var(--teal)"><span class="__cf_email__" data-cfemail="8ae5f3eff8e3edffe3eeeffce5fef8efebfcefe4e3f8caede7ebe3e6a4e9e5e7">[email&#160;protected]</span></a>. Réponse sous 30 jours.</p>
+    </div>
+    <div class="ch-art"><h3>Article 7 — Engagements des professionnels</h3><p>Les professionnels s'engagent à fournir des informations exactes, respecter les rendez-vous, agir avec bienveillance, ne pas collecter les données des jeunes à des fins externes, ne pas contourner Oyeri pour des paiements hors plateforme, et respecter la confidentialité des échanges.</p></div>
+    <div class="ch-art"><h3>Article 8 — Engagements des partenaires</h3><p>Les partenaires s'engagent à publier uniquement des offres réelles, à ne pas discriminer les jeunes, à ne pas utiliser les CV pour des finalités non prévues et à respecter les lois locales et internationales.</p></div>
+    <div class="ch-art"><h3>Article 9 — Sanctions et responsabilité</h3><p>En cas de non-respect, Oyeri pourra suspendre ou supprimer un compte, retirer une offre, ou signaler une activité à l'autorité compétente. Oyeri est responsable de la sécurité de la plateforme, de la modération et de la conformité légale.</p></div>
+    <div class="ch-art"><h3>Article 10 — Propriété intellectuelle</h3><p>L'ensemble du contenu Oyeri (logo, textes, fiches métiers) est protégé par le droit de la propriété intellectuelle. Toute reproduction sans autorisation est strictement interdite.</p></div>
+    <div class="ch-art"><h3>Article 11 — Mise à jour</h3><p>Oyeri se réserve le droit de modifier cette charte. Toute modification sera communiquée aux utilisateurs. Dernière mise à jour : 2025.</p></div>
+  </div>
+</div>
+</div>
+
+<!-- ══ NOUS REJOINDRE ══ -->
+<div id="join" class="sec">
+<div style="background:linear-gradient(135deg,var(--navy),var(--teal-d));padding:64px 24px;text-align:center;color:#fff"><h1 style="font-family:'Sora',sans-serif;font-size:36px;font-weight:800;margin-bottom:10px">Nous rejoindre</h1><p style="font-size:15px;opacity:.85;max-width:500px;margin:auto">Rejoignez l'équipe Oyeri ou devenez professionnel partenaire.</p></div>
+<div class="join-sec">
+  <div class="join-cards">
+    <div class="jc"><div class="jc-h jch-pro"><div class="bi">👔</div><h2>Je suis un professionnel</h2><p>Expert, coach, mentor — partagez votre expérience</p></div>
+    <div class="jc-b">
+      <div style="background:linear-gradient(135deg,var(--navy),#1a5a4a);border-radius:12px;padding:14px;margin-bottom:14px"><div style="font-family:'Sora',sans-serif;font-size:11px;font-weight:700;color:#a8eae4;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">✨ Vos avantages</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:7px"><div style="background:rgba(255,255,255,.08);border-radius:7px;padding:8px;text-align:center"><div style="font-size:16px;margin-bottom:3px">💰</div><div style="font-size:10px;color:#fff;font-weight:500">Revenus complémentaires</div></div><div style="background:rgba(255,255,255,.08);border-radius:7px;padding:8px;text-align:center"><div style="font-size:16px;margin-bottom:3px">🌍</div><div style="font-size:10px;color:#fff;font-weight:500">Visibilité internationale</div></div><div style="background:rgba(255,255,255,.08);border-radius:7px;padding:8px;text-align:center"><div style="font-size:16px;margin-bottom:3px">❤️</div><div style="font-size:10px;color:#fff;font-weight:500">Impact réel</div></div><div style="background:rgba(255,255,255,.08);border-radius:7px;padding:8px;text-align:center"><div style="font-size:16px;margin-bottom:3px">🏆</div><div style="font-size:10px;color:#fff;font-weight:500">Profil vérifié Oyeri</div></div></div></div>
+      <ul class="jl"><li>Proposez vos créneaux de disponibilité</li><li>Accompagnez des jeunes en orientation</li><li>Messagerie et espace pro dédié</li><li>Profil visible Afrique & Europe francophone</li><li>Option Mentor Junior disponible</li></ul>
+      <div class="jform"><div class="f2c"><div class="fg"><label>Nom</label><input type="text"></div><div class="fg"><label>Prénom</label><input type="text"></div></div><div class="fg"><label>Email</label><input type="email" placeholder="votre@email.com"></div><div class="fg"><label>Profession</label><input type="text" placeholder="Ex: Ingénieure géotechnicienne"></div><div class="fg"><label>Motivations</label><textarea placeholder="Pourquoi souhaitez-vous rejoindre Oyeri ?"></textarea></div><button class="btn-t" style="width:100%;padding:12px">Envoyer ma candidature</button></div>
+    </div></div>
+    <div class="jc"><div class="jc-h jch-team"><div class="bi">🌟</div><h2>Rejoindre l'équipe</h2><p>Conseillers, développeurs, community managers</p></div>
+    <div class="jc-b">
+      <ul class="jl"><li>Conseillers en orientation</li><li>Community manager & communication</li><li>Développeurs web & mobile</li><li>Chargés de partenariats</li></ul>
+      <div style="margin-bottom:14px;padding:13px;background:var(--teal-l);border-radius:11px;border:1px dashed var(--teal)"><div style="font-family:'Sora',sans-serif;font-size:12px;font-weight:700;color:var(--teal);margin-bottom:5px">🌟 Devenir Mentor Junior</div><p style="font-size:12px;color:var(--muted);line-height:1.5">Étudiant en fin de cursus ? Guidez ceux qui arrivent après vous. La logique "pays d'après".</p></div>
+      <div class="jform"><div class="f2c"><div class="fg"><label>Nom</label><input type="text"></div><div class="fg"><label>Prénom</label><input type="text"></div></div><div class="fg"><label>Email</label><input type="email"></div><div class="fg"><label>Poste souhaité</label><select><option>Conseiller en orientation</option><option>Community Manager</option><option>Développeur Web</option><option>Chargé de partenariats</option><option>Mentor Junior</option></select></div><div class="fg"><label>Message</label><textarea placeholder="Pourquoi rejoindre Oyeri ?"></textarea></div><button class="btn-t" style="width:100%;padding:12px">Postuler maintenant</button></div>
+    </div></div>
+  </div>
+</div>
+</div>
+
+<!-- ══ PARTENAIRES ══ -->
+<div id="partners" class="sec">
+<div style="background:linear-gradient(135deg,var(--navy),var(--teal-d));padding:64px 24px;text-align:center;color:#fff"><h1 style="font-family:'Sora',sans-serif;font-size:36px;font-weight:800;margin-bottom:10px">Devenir Partenaire</h1><p style="font-size:15px;opacity:.85;max-width:500px;margin:auto">Entreprises, établissements, ONG — rejoignez l'écosystème Oyeri.</p></div>
+<div style="padding:64px 24px;background:var(--white)">
+  <div class="wrap">
+    <div class="part-types">
+      <div class="pt2"><div class="pt2-h pth1"><span class="big">🎓</span><h3>Établissements</h3><p>Lycées, universités, centres de formation</p></div><div class="pt2-b"><div style="background:#e8f4ee;border-radius:8px;padding:10px;margin-bottom:10px"><div style="font-size:11px;font-weight:700;color:#1a4a2a;margin-bottom:5px">✅ Avantages partenaire</div><div style="display:flex;gap:6px;flex-wrap:wrap"><span style="background:#1a4a2a;color:#fff;font-size:10px;padding:2px 8px;border-radius:50px;font-weight:600">Visibilité</span><span style="background:#1a4a2a;color:#fff;font-size:10px;padding:2px 8px;border-radius:50px;font-weight:600">Accès talents</span><span style="background:#1a4a2a;color:#fff;font-size:10px;padding:2px 8px;border-radius:50px;font-weight:600">Pack étab.</span></div></div><ul class="pl"><li>Orientation scolaire vers nos packs</li><li>Parcours annuels d'orientation</li><li>Programmes d'insertion professionnelle</li><li>Formations soft skills</li></ul></div></div>
+      <div class="pt2"><div class="pt2-h pth2"><span class="big">🏢</span><h3>Entreprises</h3><p>PME, grandes entreprises, start-ups</p></div><div class="pt2-b"><ul class="pl"><li>Dépôt d'offres emploi et stage</li><li>Recrutement de jeunes talents</li><li>Actions RSE et impact social</li><li>Visibilité Afrique & Europe francophone</li></ul></div></div>
+      <div class="pt2"><div class="pt2-h pth3"><span class="big">🌍</span><h3>ONG & Associations</h3><p>Organisations à impact social</p></div><div class="pt2-b"><ul class="pl"><li>Programmes institutionnels</li><li>Collaboration long terme</li><li>Co-organisation d'ateliers</li><li>Impact RSE mesurable</li></ul></div></div>
+    </div>
+    <div style="background:var(--teal-l);border-radius:22px;padding:40px">
+      <h2 style="font-family:'Sora',sans-serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:6px">Devenez partenaire</h2>
+      <p style="color:var(--muted);margin-bottom:22px;font-size:13px">Remplissez ce formulaire et nous reviendrons vers vous sous 48h.</p>
+      <div class="jform">
+        <div class="f2c"><div class="fg"><label>Nom de la structure</label><input type="text" placeholder="Nom de votre organisation"></div><div class="fg"><label>Type</label><select><option>Établissement scolaire</option><option>Entreprise</option><option>ONG / Association</option></select></div></div>
+        <div class="f2c"><div class="fg"><label>Contact</label><input type="text"></div><div class="fg"><label>Email</label><input type="email"></div></div>
+        <div class="fg"><label>Objet du partenariat</label><textarea placeholder="Décrivez votre projet..."></textarea></div>
+        <button class="btn-t" style="padding:12px 28px">Envoyer la demande</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══ EMPLOI/STAGE ══ -->
+<div id="jobs" class="sec">
+<div style="background:linear-gradient(135deg,var(--navy),var(--teal-d));padding:64px 24px;text-align:center;color:#fff"><h1 style="font-family:'Sora',sans-serif;font-size:36px;font-weight:800;margin-bottom:10px">Offres Emploi & Stage</h1><p style="font-size:15px;opacity:.85;max-width:500px;margin:auto">Déposez une offre ou soumettez votre profil.</p></div>
+<div style="padding:64px 24px;background:var(--white)">
+  <div style="max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:36px">
+    <div>
+      <div style="background:var(--bg);border-radius:22px;padding:28px;border:1px solid var(--border)"><h2 style="font-family:'Sora',sans-serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:18px">📤 Déposer une offre</h2><div class="jform"><div class="fg"><label>Titre du poste</label><input type="text" placeholder="Ex: Stagiaire Marketing"></div><div class="fg"><label>Entreprise</label><input type="text"></div><div class="fg"><label>Type de contrat</label><select><option>Stage</option><option>Emploi CDI</option><option>Emploi CDD</option><option>Alternance</option></select></div><div class="fg"><label>Localisation</label><input type="text" placeholder="Libreville / Paris..."></div><div class="fg"><label>Description</label><textarea placeholder="Missions, profil recherché..."></textarea></div><button class="btn-t" style="width:100%;padding:12px">Publier l'offre</button></div></div>
+      <div style="background:var(--bg);border-radius:22px;padding:28px;border:1px solid var(--border);margin-top:18px"><h2 style="font-family:'Sora',sans-serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:18px">📋 Soumettre mon CV</h2><div class="cv-up"><div style="font-size:32px;margin-bottom:8px">📄</div><p style="font-size:12px;color:var(--muted)">Glissez votre CV ou <strong style="color:var(--teal)">cliquez pour choisir</strong></p></div><div class="jform"><div class="fg"><label>Domaine recherché</label><input type="text" placeholder="Ex: Informatique, Finance..."></div><div class="fg"><label>Type de contrat souhaité</label><select><option>Stage</option><option>Emploi</option><option>Alternance</option></select></div><button class="btn-t" style="width:100%;padding:12px">Soumettre mon profil</button></div></div>
+    </div>
+    <div>
+      <h2 style="font-family:'Sora',sans-serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:18px">Offres récentes</h2>
+      <div style="border:1px solid var(--border);border-radius:13px;padding:18px;margin-bottom:13px;transition:all .2s" onmouseover="this.style.borderColor='var(--teal)'" onmouseout="this.style.borderColor='var(--border)'"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:7px"><span style="font-family:'Sora',sans-serif;font-weight:600;font-size:14px;color:var(--navy)">Stagiaire Communication Digitale</span><span style="background:var(--teal-l);color:var(--teal-d);font-size:10px;font-weight:600;padding:3px 9px;border-radius:50px">Stage</span></div><div style="font-size:12px;color:var(--muted);margin-bottom:7px">🏢 ONG Avenir Jeunes — Libreville</div><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"><span style="padding:2px 8px;background:var(--bg);border-radius:5px;font-size:10px;color:var(--muted)">Communication</span><span style="padding:2px 8px;background:var(--bg);border-radius:5px;font-size:10px;color:var(--muted)">3 mois</span></div><div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:10px;color:var(--muted)">18 Mars 2025</span><button class="btn-t" style="font-size:11px;padding:6px 12px" onclick="go('payment')">Postuler</button></div></div>
+      <div style="border:1px solid var(--border);border-radius:13px;padding:18px;margin-bottom:13px;transition:all .2s" onmouseover="this.style.borderColor='var(--teal)'" onmouseout="this.style.borderColor='var(--border)'"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:7px"><span style="font-family:'Sora',sans-serif;font-weight:600;font-size:14px;color:var(--navy)">Technicien Géotechnique</span><span style="background:var(--teal-l);color:var(--teal-d);font-size:10px;font-weight:600;padding:3px 9px;border-radius:50px">Emploi CDD</span></div><div style="font-size:12px;color:var(--muted);margin-bottom:7px">🏢 Bureau d'études Sol — Libreville</div><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"><span style="padding:2px 8px;background:var(--bg);border-radius:5px;font-size:10px;color:var(--muted)">BTP</span><span style="padding:2px 8px;background:var(--bg);border-radius:5px;font-size:10px;color:var(--muted)">6 mois</span></div><div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:10px;color:var(--muted)">12 Mars 2025</span><button class="btn-t" style="font-size:11px;padding:6px 12px" onclick="go('payment')">Postuler</button></div></div>
+      <div style="border:1px solid var(--border);border-radius:13px;padding:18px;transition:all .2s" onmouseover="this.style.borderColor='var(--teal)'" onmouseout="this.style.borderColor='var(--border)'"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:7px"><span style="font-family:'Sora',sans-serif;font-weight:600;font-size:14px;color:var(--navy)">Alternance Marketing — Paris</span><span style="background:var(--teal-l);color:var(--teal-d);font-size:10px;font-weight:600;padding:3px 9px;border-radius:50px">Alternance</span></div><div style="font-size:12px;color:var(--muted);margin-bottom:7px">🏢 EdTech Start-up — Paris 🇫🇷</div><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"><span style="padding:2px 8px;background:var(--bg);border-radius:5px;font-size:10px;color:var(--muted)">Marketing</span><span style="padding:2px 8px;background:var(--bg);border-radius:5px;font-size:10px;color:var(--muted)">12 mois</span></div><div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:10px;color:var(--muted)">1 Mars 2025</span><button class="btn-t" style="font-size:11px;padding:6px 12px" onclick="go('payment')">Postuler</button></div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══ PAIEMENT ══ -->
+<div id="payment" class="sec">
+<div style="background:linear-gradient(135deg,var(--navy),var(--teal-d));padding:64px 24px;text-align:center;color:#fff"><h1 style="font-family:'Sora',sans-serif;font-size:36px;font-weight:800;margin-bottom:10px">Moyens de paiement</h1><p style="font-size:15px;opacity:.85">Plusieurs options adaptées à votre pays et préférences.</p></div>
+<div style="padding:64px 24px;background:var(--bg)">
+  <div class="wrap">
+    <div class="s-hd"><h2>Choisissez votre mode de paiement</h2></div>
+    <div class="pay-methods">
+      <div class="pay-card sel" onclick="selPay(this)"><div class="pay-ic">💳</div><h4>Carte bancaire</h4><p>Visa, Mastercard</p></div>
+      <div class="pay-card" onclick="selPay(this)"><div class="pay-ic">📱</div><h4>Airtel Money</h4><p>Mobile Money Gabon</p></div>
+      <div class="pay-card" onclick="selPay(this)"><div class="pay-ic">📲</div><h4>Moov Money</h4><p>Mobile Money Gabon</p></div>
+      <div class="pay-card" onclick="selPay(this)"><div class="pay-ic">🅿️</div><h4>PayPal</h4><p>Paiement international</p></div>
+      <div class="pay-card" onclick="selPay(this)"><div class="pay-ic">🏦</div><h4>Virement bancaire</h4><p>Transfert IBAN</p></div>
+      <div class="pay-card" onclick="selPay(this)"><div class="pay-ic">🌍</div><h4>Western Union</h4><p>Transfert international</p></div>
+      <div class="pay-card" onclick="selPay(this)"><div class="pay-ic">💸</div><h4>Wave</h4><p>Mobile Money Afrique</p></div>
+      <div class="pay-card" onclick="selPay(this)"><div class="pay-ic">📦</div><h4>MoneyGram</h4><p>Transfert international</p></div>
+    </div>
+    <div style="background:var(--white);border-radius:18px;padding:28px;margin-top:28px;border:1px solid var(--border)"><h3 style="font-family:'Sora',sans-serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:14px">💳 Paiement par carte bancaire</h3><p style="color:var(--muted);margin-bottom:16px;font-size:12px">🔒 Paiement sécurisé — Données protégées par chiffrement SSL.</p><div class="jform"><div class="fg"><label>Numéro de carte</label><input type="text" placeholder="1234 5678 9012 3456"></div><div class="f2c"><div class="fg"><label>Expiration</label><input type="text" placeholder="MM/AA"></div><div class="fg"><label>CVV</label><input type="text" placeholder="123"></div></div><div class="fg"><label>Nom sur la carte</label><input type="text" placeholder="JEAN DUPONT"></div><button class="btn-t" style="width:100%;padding:12px;font-size:14px">🔒 Payer maintenant</button></div></div>
+  </div>
+</div>
+</div>
+
+<!-- ══ LOGIN ══ -->
+<div id="login" class="sec">
+<div class="login-wrap">
+  <div class="login-box">
+    <div style="text-align:center;margin-bottom:24px"><img id="loginLogo" style="height:52px" alt="Oyeri"><h2 style="font-family:'Sora',sans-serif;font-size:22px;font-weight:700;color:var(--navy);margin-top:8px">Se connecter</h2></div>
+    <div class="jform">
+      <div class="fg"><label>Adresse e-mail</label><input type="email" placeholder="votre@email.com"></div>
+      <div class="fg"><label>Mot de passe</label><input type="password" placeholder="••••••••"></div>
+      <div style="display:flex;justify-content:space-between;font-size:12px"><a href="javascript:void(0)" onclick="go('dashboard-pro');return false;" style="color:var(--teal);cursor:pointer">Espace professionnel</a><a style="color:var(--teal);cursor:pointer">Mot de passe oublié ?</a></div>
+      <button class="btn-t" style="width:100%;padding:12px;font-size:14px" onclick="go('dashboard-user')">Se connecter</button>
+      <div style="text-align:center;font-size:12px;color:var(--muted)">Pas encore de compte ? <a style="color:var(--teal);font-weight:600;cursor:pointer">S'inscrire gratuitement</a></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══ DASHBOARDS ══ -->
+<div id="dashboard-user" class="sec">
+<div class="dash-sec">
+  <div class="dash-in">
+    <div class="dash-nav"><h3>Mon espace</h3><div class="dl on"><span class="i">🏠</span>Tableau de bord</div><div class="dl"><span class="i">📅</span>Mes rendez-vous</div><div class="dl"><span class="i">💬</span>Messagerie</div><div class="dl"><span class="i">📄</span>Mes documents</div><div class="dl"><span class="i">🧪</span>Mes tests</div><div class="dl" style="margin-top:18px;color:#e53e3e"><span class="i">🚪</span>Déconnexion</div></div>
+    <div class="dash-c">
+      <div class="d-greet"><h2>Bonjour, Dany 👋</h2><p style="opacity:.8;font-size:13px">Continuez à construire votre avenir avec Oyeri</p></div>
+      <div class="d-stats"><div class="d-stat"><div class="d-n">2</div><div class="d-l">RDV réalisés</div></div><div class="d-stat"><div class="d-n">1</div><div class="d-l">RDV à venir</div></div><div class="d-stat"><div class="d-n" style="font-size:14px">Pack Clarté</div><div class="d-l">Offre active</div></div></div>
+      <div class="d-panel" style="border:2px solid var(--teal)">
+        <h3>🔔 Suivi de votre parcours</h3>
+        <div style="background:var(--teal-l);border-radius:12px;padding:14px;margin-bottom:10px">
+          <div style="font-family:'Sora',sans-serif;font-weight:600;font-size:13px;color:var(--navy);margin-bottom:4px">📅 J+30 — Bilan de votre session du 24 Avril</div>
+          <p style="font-size:12px;color:var(--muted);margin-bottom:10px">Avez-vous avancé dans votre projet ? Votre conseillère Theresa souhaite savoir comment vous allez.</p>
+          <div style="display:flex;gap:8px"><button class="btn-t" style="padding:7px 14px;font-size:12px">✅ J'ai avancé !</button><button style="padding:7px 14px;background:var(--white);border:1px solid var(--border);border-radius:8px;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif" onclick="go('rdv')">📅 Reprendre un RDV</button></div>
+        </div>
+        <div style="font-size:11px;color:var(--muted);text-align:center">Prochain suivi automatique dans 60 jours (J+90)</div>
+      </div>
+      <div class="d-panel"><h3>📅 Mon prochain rendez-vous</h3><div class="rdv-it"><div class="rdv-dt"><div class="rdv-dy">24</div><div class="rdv-mo">Avr</div></div><div style="margin-left:4px"><h4 style="font-size:13px;font-weight:500;color:var(--navy);margin-bottom:1px">Session avec Theresa W. — Ingénieure</h4><p style="font-size:11px;color:var(--muted)">09:00 — 30 min</p></div><div class="rdv-bg bg-ok" style="margin-left:auto">Confirmé</div></div><button class="btn-t" style="margin-top:12px" onclick="go('rdv')">+ Nouveau RDV</button></div>
+      <div class="d-panel"><h3>🧪 Mes résultats de tests</h3><div style="display:flex;gap:10px;flex-wrap:wrap"><div style="padding:10px 14px;background:var(--teal-l);border-radius:10px;font-size:12px;color:var(--navy)"><strong>Personnalité :</strong> Profil Analytique</div><div style="padding:10px 14px;background:#fef3c7;border-radius:10px;font-size:12px;color:var(--navy)"><strong>Aptitudes :</strong> Logique & Technique</div></div></div>
+      <div class="d-panel"><h3>💬 Messagerie</h3><div class="msg-l"><div class="msg-it"><div class="msg-av">T</div><div><h4>Theresa Webb (Mentor)</h4><p>À jeudi pour notre session ✅</p></div><div class="msg-dot"></div></div></div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="dashboard-pro" class="sec">
+<div class="dash-sec">
+  <div class="dash-in">
+    <div class="dash-nav"><h3>Espace Pro</h3><div class="dl on"><span class="i">🏠</span>Tableau de bord</div><div class="dl"><span class="i">📅</span>Mes rendez-vous</div><div class="dl"><span class="i">💬</span>Messagerie</div><div class="dl"><span class="i">👤</span>Mon profil</div><div class="dl" style="margin-top:18px;color:#e53e3e"><span class="i">🚪</span>Déconnexion</div></div>
+    <div class="dash-c">
+      <div class="d-greet"><h2>Bonjour, Dr. Theresa 👋</h2><p style="opacity:.8;font-size:13px">Bienvenue dans votre espace professionnel Oyeri</p></div>
+      <div class="d-stats"><div class="d-stat"><div class="d-n">12</div><div class="d-l">RDV réalisés</div></div><div class="d-stat"><div class="d-n">3</div><div class="d-l">RDV à venir</div></div><div class="d-stat"><div class="d-n">8</div><div class="d-l">Jeunes accompagnés</div></div></div>
+      <div class="d-panel"><h3>📅 Prochains rendez-vous</h3><div class="rdv-it"><div class="rdv-dt"><div class="rdv-dy">24</div><div class="rdv-mo">Avr</div></div><div style="margin-left:4px"><h4 style="font-size:13px;font-weight:500;color:var(--navy);margin-bottom:1px">Session avec Dany K. — Pack Découverte (gratuit)</h4><p style="font-size:11px;color:var(--muted)">09:00 — 30 min</p></div><div class="rdv-bg bg-ok" style="margin-left:auto">Confirmé</div></div><div class="rdv-it"><div class="rdv-dt"><div class="rdv-dy">26</div><div class="rdv-mo">Avr</div></div><div style="margin-left:4px"><h4 style="font-size:13px;font-weight:500;color:var(--navy);margin-bottom:1px">Session avec Lucie M. — Pack Orientation+</h4><p style="font-size:11px;color:var(--muted)">14:00 — 1h</p></div><div class="rdv-bg bg-w" style="margin-left:auto">En attente</div></div></div>
+      <div class="d-panel"><h3>💬 Messagerie</h3><div class="msg-l"><div class="msg-it"><div class="msg-av">D</div><div><h4>Dany K.</h4><p>Merci pour notre session !</p></div><div class="msg-dot"></div></div><div class="msg-it"><div class="msg-av">O</div><div><h4>Équipe Oyeri</h4><p>Nouveau jeune assigné à votre profil.</p></div></div></div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ══ PRISE DE RDV ══ -->
+<div id="rdv" class="sec">
+<div style="padding:80px 24px;background:var(--bg)">
+  <div class="rdv-in">
+    <div class="s-hd" style="margin-bottom:32px"><h2>Prise de rendez-vous</h2><p>Réservez votre session en 4 étapes simples.</p></div>
+    <div class="rdv-steps">
+      <div class="rdv-step done" id="s1"><div class="sc">✓</div><div class="sl">Mon profil</div></div>
+      <div class="rdv-step act" id="s2"><div class="sc">2</div><div class="sl">Choisir un pro</div></div>
+      <div class="rdv-step" id="s3"><div class="sc">3</div><div class="sl">Date & heure</div></div>
+      <div class="rdv-step" id="s4"><div class="sc">4</div><div class="sl">Confirmation</div></div>
+    </div>
+    <div id="rdvS1" class="rdv-box hidden">
+      <h2>Votre profil</h2><p class="sub">Dites-nous en plus sur vous</p>
+      <div class="jform"><div class="f2c"><div class="fg"><label>Nom</label><input type="text"></div><div class="fg"><label>Prénom</label><input type="text"></div></div><div class="f2c"><div class="fg"><label>Date de naissance</label><input type="date"></div><div class="fg"><label>Email</label><input type="email"></div></div><div class="fg"><label>Pack choisi</label><select><option>Pack Découverte — GRATUIT</option><option>Pack Clarté — 30€</option><option>Pack Orientation+ — 40€</option><option>Pack Réinsertion — 40€</option><option>Pack Prêt Emploi — 45€</option><option>Pack Campus France — 106,99€</option></select></div><div class="fg"><label>Décris-toi en quelques mots</label><textarea placeholder="Qui es-tu ? Quelles sont tes ambitions ?"></textarea></div></div>
+      <div class="rdv-nav"><button class="btn-nxt" onclick="goStep(2)">Suivant →</button></div>
+    </div>
+    <div id="rdvS2" class="rdv-box">
+      <h2>Choisissez un professionnel</h2><p class="sub">Tous nos professionnels sont vérifiés par Oyeri</p>
+      <div class="pro-list">
+        <div class="pro-it sel" onclick="selPro(this)"><div class="pro-av2">👩</div><div style="flex:1"><h4>Theresa Webb <span class="verified" style="margin-left:4px">✓ Vérifié</span></h4><p>Ingénieure · 🇬🇦</p><div style="font-size:10px;color:var(--teal);margin-top:1px">★★★★★ 23 sessions</div></div></div>
+        <div class="pro-it" onclick="selPro(this)"><div class="pro-av2">🧑</div><div style="flex:1"><h4>Ralph Eddards <span class="verified" style="margin-left:4px">✓ Vérifié</span></h4><p>Psychologue · 🇫🇷</p><div style="font-size:10px;color:var(--teal);margin-top:1px">★★★★★ 18 sessions</div></div></div>
+        <div class="pro-it" onclick="selPro(this)"><div class="pro-av2">👨</div><div style="flex:1"><h4>Cameron W. <span class="verified" style="margin-left:4px">✓ Vérifié</span></h4><p>Infirmier · 🇨🇲</p><div style="font-size:10px;color:var(--teal);margin-top:1px">★★★★☆ 12 sessions</div></div></div>
+        <div class="pro-it" onclick="selPro(this)"><div class="pro-av2">👩</div><div style="flex:1"><h4>Kathryn M. <span class="verified" style="margin-left:4px">✓ Vérifié</span></h4><p>Conseillère financière · 🇧🇪</p><div style="font-size:10px;color:var(--teal);margin-top:1px">★★★★★ 31 sessions</div></div></div>
+        <div class="pro-it" onclick="selPro(this)"><div class="pro-av2">👨</div><div style="flex:1"><h4>Jean-Paul Mba <span class="verified" style="margin-left:4px">✓ Vérifié</span></h4><p>Coach Emploi · 🇬🇦</p><div style="font-size:10px;color:var(--teal);margin-top:1px">★★★★★ 9 sessions</div></div></div>
+        <div class="pro-it" onclick="selPro(this)"><div class="pro-av2">👩</div><div style="flex:1"><h4>Aurélie Bongo <span class="verified" style="margin-left:4px">✓ Vérifié</span></h4><p>Campus France · 🇫🇷</p><div style="font-size:10px;color:var(--teal);margin-top:1px">★★★★★ 44 sessions</div></div></div>
+      </div>
+      <div class="rdv-nav"><button class="btn-back" onclick="goStep(1)">← Retour</button><button class="btn-nxt" onclick="goStep(3)">Date →</button></div>
+    </div>
+    <div id="rdvS3" class="rdv-box hidden">
+      <h2>Choisissez une date</h2><p class="sub">Sélectionnez un créneau disponible</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start">
+        <div><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><button style="background:none;border:none;font-size:16px;cursor:pointer">‹</button><span style="font-family:'Sora',sans-serif;font-weight:600;color:var(--navy);font-size:13px">Avril 2025</span><button style="background:none;border:none;font-size:16px;cursor:pointer">›</button></div>
+        <div class="cal-grid">
+          <div class="cal-hd">L</div><div class="cal-hd">M</div><div class="cal-hd">M</div><div class="cal-hd">J</div><div class="cal-hd">V</div><div class="cal-hd">S</div><div class="cal-hd">D</div>
+          <div class="cal-d em"></div><div class="cal-d em"></div><div class="cal-d em"></div><div class="cal-d em"></div><div class="cal-d em"></div><div class="cal-d">1</div><div class="cal-d">2</div>
+          <div class="cal-d">3</div><div class="cal-d">4</div><div class="cal-d">5</div><div class="cal-d av" onclick="selDay(this)">6</div><div class="cal-d av" onclick="selDay(this)">7</div><div class="cal-d">8</div><div class="cal-d">9</div>
+          <div class="cal-d">10</div><div class="cal-d">11</div><div class="cal-d av" onclick="selDay(this)">12</div><div class="cal-d av" onclick="selDay(this)">13</div><div class="cal-d av" onclick="selDay(this)">14</div><div class="cal-d">15</div><div class="cal-d">16</div>
+          <div class="cal-d">17</div><div class="cal-d">18</div><div class="cal-d av" onclick="selDay(this)">19</div><div class="cal-d av sel" onclick="selDay(this)">20</div><div class="cal-d av" onclick="selDay(this)">21</div><div class="cal-d">22</div><div class="cal-d">23</div>
+          <div class="cal-d av" onclick="selDay(this)">24</div><div class="cal-d av" onclick="selDay(this)">25</div><div class="cal-d av" onclick="selDay(this)">26</div><div class="cal-d av" onclick="selDay(this)">27</div><div class="cal-d av" onclick="selDay(this)">28</div><div class="cal-d">29</div><div class="cal-d">30</div>
+        </div></div>
+        <div><p style="font-size:12px;font-weight:500;color:var(--navy);margin-bottom:10px">Créneaux — 20 Avril</p>
+        <div class="time-slots"><div class="tsl sel" onclick="selTime(this)">09:00</div><div class="tsl" onclick="selTime(this)">10:30</div><div class="tsl" onclick="selTime(this)">12:00</div><div class="tsl" onclick="selTime(this)">14:00</div><div class="tsl" onclick="selTime(this)">15:30</div><div class="tsl" onclick="selTime(this)">19:30</div></div></div>
+      </div>
+      <div class="rdv-nav"><button class="btn-back" onclick="goStep(2)">← Retour</button><button class="btn-nxt" onclick="goStep(4)">Confirmer →</button></div>
+    </div>
+    <div id="rdvS4" class="rdv-box hidden">
+      <div class="success-box"><div class="bchk">✅</div><h2>Votre demande a été enregistrée !</h2><p>Nos équipes reviendront vers vous sous 48h pour confirmer le rendez-vous. Vous recevrez un email de confirmation à l'adresse indiquée.</p><div style="margin-top:20px;padding:14px;background:var(--teal-l);border-radius:12px;font-size:13px;color:var(--navy)">🎁 Si vous avez choisi le <strong>Pack Découverte</strong>, votre session est entièrement <strong>gratuite</strong>. Aucune carte bancaire requise.</div><button class="btn-t" style="margin-top:18px;padding:12px 28px;font-size:14px" onclick="go('home')">Retour à l'accueil</button></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- RGPD BANNER -->
+<div id="rgpdBanner">
+  <div class="rgpd-in">
+    <div style="font-size:14px;font-weight:600;color:#fff;margin-bottom:4px">🍪 Cookies & Protection des données</div>
+    <p>Oyeri utilise des cookies techniques nécessaires au fonctionnement. Vos données sont protégées conformément au <strong style="color:var(--teal)">RGPD</strong>. En continuant, vous acceptez notre <a href="javascript:void(0)" onclick="go('charter');return false;" style="color:var(--teal);cursor:pointer;text-decoration:underline">charte informatique</a>.</p>
+    <div class="rgpd-btns"><button onclick="document.getElementById('rgpdBanner').style.display='none';localStorage.setItem('rgpd','ok')" style="padding:9px 18px;background:var(--teal);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif">Accepter</button><button onclick="go('charter');document.getElementById('rgpdBanner').style.display='none'" style="padding:9px 18px;background:transparent;border:1px solid rgba(255,255,255,.3);border-radius:8px;color:#fff;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif">En savoir plus</button></div>
+  </div>
+</div>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+var LOGO="data:image/png;base64,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cM4xA8mnJrNF7z2CIGlmLnLJFb13ZuG9906vra212iNlWR48ePBz9961dfNYVXCjmW7atGlycipJUic1JHZleSGxdnp64tDl+7/y+fvuu+/zwFopNLFikNrxw9995MnHnh70Chs3+muDd46/q+P40E1Xp1nKdej53DuPhDo2oqAWV7HXk8241dSM5cqa5HnbNi5rTxwYnZqKGggIAErbwSDvF+XC4vLS0mKv12ORXq/Pgb/4hS/+8i/+7NhIc6VfKpI4ihNrg69D8FrruqonJ1o33nD9a28eu7i4qmObpmmeD/I8Z2bnnBK01gLhsN3LIiTyqel3iggREQKIWGNKH1bX186dOzs/P19VlTHGe79j+/Y9e/YPcigGeSNpXHPtVQtz50+ePNF7510Evmzvjttuu/XAZZft3Lr94N7LWiPp+TMXJqdGI92oKvYiv//7f7C8vJqlLYfYr6r+SufIy280243Z7VuzViNKImGp2DuuwRjRBpECyMraiipdS9TWianLx2cvm5iZtLFxIihgNSgQQRAoyjovKgSMbNTv96+/8cY7brth8/jI8qBYWV7ZuW1zrKjyofJOM6Rx2u93BHD//sv27ds3t/iMUkqDHD16dGlp8boDO/veELL3HjwPubWKlNZavPtYJIc+iWF6pbVW5B1royOlQgi9Xq+unY0iY0ye56Ojo9u3TigKIliVwWh78803bZqZXOn1grFjk5NbNm3K0kyTaWWZMZi1mkimqMKF+aUXX3356NETpLRRMYAkmuq8DqHzzLcf3LJ7x/4rD+/ev6eVZQX7CurahaKsAvhmmvjKJ4q2jE0enNm6b2R6UsW29FAXtUgINlKNOI1UpNVFVVc1IrZaLc9h544d7ZExIMwSa6fGjaLFlZW6rhpp2mg0MEgU2bqSyYnpLVu2ECmlyFfVu++eWlxcoiEdiSiEijkwECqNij5GVOiTyGxJKUAsikFMWhsNABwYEbXWHIIxdmR0pJGasvTtVhRYgvebZmd37N4hIDWgABRVQUBG2bqq8l49OtasHXimd987/e//r/93lrWW19eLspO225lNBvPzIzOTg+W1M9WJQad79uSJZKTZnp6Y3bV1cnrSJAYgtJIsNXrSpDON1lQja5IhJ0ACShQaJpUXFRAlmSWlnPcCEsVx2V2fmZk2JuqWDjnYyNbOAWKaJJExdVWRYKOZ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";
+(function(){
+  ["navLogo","footLogo","loginLogo","fWmLogo"].forEach(function(id){
+    var e=document.getElementById(id);
+    if(e) e.src=LOGO;
+  });
+})();
+
+// ── NAVIGATION ──
+function go(id){
+  document.querySelectorAll(".sec").forEach(function(s){s.classList.remove("on");});
+  var el=document.getElementById(id);
+  if(el){ el.classList.add("on"); window.scrollTo({top:0,behavior:"smooth"}); }
+  var map={"home":"nl-home","offres":"nl-offres","tests":"nl-tests","fiches":"nl-fiches","rejoindre-nous":"nl-rejoindre","about":"nl-about","charter":"nl-charter"};
+  document.querySelectorAll(".nav-links a").forEach(function(a){a.classList.remove("active");});
+  if(map[id]){var a=document.getElementById(map[id]);if(a)a.classList.add("active");}
+  return false;
+}
+
+// ── UTILS ──
+function selPay(el){document.querySelectorAll(".pay-card").forEach(function(c){c.classList.remove("sel");});el.classList.add("sel");}
+function selPro(el){document.querySelectorAll(".pro-it").forEach(function(p){p.classList.remove("sel");});el.classList.add("sel");}
+function selDay(el){document.querySelectorAll(".cal-d").forEach(function(d){d.classList.remove("sel");});el.classList.add("sel");}
+function selTime(el){document.querySelectorAll(".tsl").forEach(function(t){t.classList.remove("sel");});el.classList.add("sel");}
+
+// ── RDV STEPS ──
+function goStep(n){
+  for(var i=1;i<=4;i++){
+    var box=document.getElementById("rdvS"+i);
+    if(box) box.classList.toggle("hidden",i!==n);
+    var step=document.getElementById("s"+i);
+    if(step){
+      step.classList.remove("act","done");
+      if(i<n) step.classList.add("done");
+      if(i===n) step.classList.add("act");
+    }
+  }
+}
+
+// ── JOIN TABS ──
+function switchJoinTab(tab){
+  document.getElementById("panel-pro").style.display=tab==="pro"?"block":"none";
+  document.getElementById("panel-part").style.display=tab==="part"?"block":"none";
+  var tbPro=document.getElementById("tab-pro"), tbPart=document.getElementById("tab-part");
+  if(tab==="pro"){
+    tbPro.style.borderBottomColor="var(--teal)"; tbPro.style.color="var(--teal)"; tbPro.style.fontWeight="700";
+    tbPart.style.borderBottomColor="transparent"; tbPart.style.color="var(--muted)"; tbPart.style.fontWeight="600";
+  } else {
+    tbPart.style.borderBottomColor="var(--teal)"; tbPart.style.color="var(--teal)"; tbPart.style.fontWeight="700";
+    tbPro.style.borderBottomColor="transparent"; tbPro.style.color="var(--muted)"; tbPro.style.fontWeight="600";
+  }
+}
+
+// ── FICHES METIERS ──
+var FICHES=[
+  {id:1,ic:"⚙️",t:"Ingénieur Géotechnicien",s:"BTP & Géologie",bg:"background:linear-gradient(135deg,#1a3a4a,#2d6a5f)",
+   missions:["Étude des sols et sous-sols","Calculs de stabilité des ouvrages","Suivi de chantier et rapports","Expertise pour fondations et tunnels"],
+   formations:["Bac+5 École Génie Civil","Master Géosciences / Géotechnique","DUT Génie Civil + spécialisation"],
+   qualites:["Rigueur analytique","Goût pour le terrain","Esprit mathématique","Rédaction technique"],
+   debouches:["Bureau d'études","Entreprises BTP","Administrations publiques","Cabinets de conseil"],
+   sg:"300–600k FCFA/mois",sf:"35 000–55 000€/an",tend:"📈 Secteur en croissance (urbanisation africaine)"},
+  {id:2,ic:"💻",t:"Développeur Web Full Stack",s:"Informatique & Digital",bg:"background:linear-gradient(135deg,#1a2a4a,#3a5a8a)",
+   missions:["Conception d'applications web","Gestion de bases de données","Tests et débogage","Maintenance des plateformes"],
+   formations:["Bac+3/5 Informatique","BTS SIO option SLAM","Bootcamp certifiant (6 mois)"],
+   qualites:["Logique et résolution de problèmes","Curiosité technologique","Travail en équipe Agile","Veille technologique"],
+   debouches:["Start-ups & scale-ups","Agences digitales","Grandes entreprises","Freelance"],
+   sg:"250–500k FCFA/mois",sf:"38 000–60 000€/an",tend:"🔥 Très forte demande partout"},
+  {id:3,ic:"🏥",t:"Infirmier(e) Diplômé(e)",s:"Santé & Soins",bg:"background:linear-gradient(135deg,#4a1a1a,#8a3a3a)",
+   missions:["Soins infirmiers et surveillance","Administration des traitements","Éducation thérapeutique","Coordination avec l'équipe médicale"],
+   formations:["Diplôme d'État Infirmier (3 ans)","Spécialisations : urgences, bloc","Formation continue obligatoire"],
+   qualites:["Empathie et écoute","Réactivité face aux urgences","Rigueur dans les protocoles","Résistance au stress"],
+   debouches:["Hôpitaux et cliniques","Centres de santé","Milieu libéral","Humanitaire et ONG"],
+   sg:"200–400k FCFA/mois",sf:"26 000–40 000€/an",tend:"✅ Secteur toujours porteur"},
+  {id:4,ic:"📊",t:"Analyste Financier",s:"Finance & Économie",bg:"background:linear-gradient(135deg,#1a4a2a,#3a8a5a)",
+   missions:["Analyse des états financiers","Modélisation financière","Rédaction de rapports","Conseil en investissement"],
+   formations:["Bac+5 Finance / École de Commerce","Master Finance de marchés","CFA (Chartered Financial Analyst)"],
+   qualites:["Maîtrise Excel et outils financiers","Rigueur analytique","Bonne communication","Curiosité pour l'économie"],
+   debouches:["Banques d'investissement","Fonds d'investissement","Cabinets de conseil","Grandes entreprises"],
+   sg:"350–700k FCFA/mois",sf:"40 000–80 000€/an",tend:"📈 Croissance avec le développement africain"},
+  {id:5,ic:"🎨",t:"Designer Graphique / UX-UI",s:"Design & Créativité",bg:"background:linear-gradient(135deg,#4a1a3a,#8d3a6a)",
+   missions:["Création de visuels print et digital","Design d'interfaces apps et sites","Identité visuelle et branding","Motion design et animations"],
+   formations:["Licence / Master Arts Appliqués","BTS Design Graphique","Formation Figma, Illustrator certifiée"],
+   qualites:["Sens esthétique développé","Maîtrise Figma et Photoshop","Créativité et originalité","Écoute des besoins clients"],
+   debouches:["Agences de communication","Studios de design","Équipes marketing","Freelance"],
+   sg:"200–450k FCFA/mois",sf:"30 000–50 000€/an",tend:"🎯 Fort besoin dans le digital africain"},
+  {id:6,ic:"⚖️",t:"Juriste / Avocat",s:"Droit & Justice",bg:"background:linear-gradient(135deg,#2a1a4a,#5a3a8a)",
+   missions:["Conseil juridique aux entreprises","Rédaction de contrats","Représentation devant les tribunaux","Veille juridique et réglementaire"],
+   formations:["Licence puis Master Droit (Bac+5)","CRFPA (barreau) pour avocat","Spécialisations : droit des affaires, OHADA"],
+   qualites:["Esprit d'analyse et de synthèse","Rigueur rédactionnelle","Argumentation et persuasion","Discrétion et éthique"],
+   debouches:["Cabinets d'avocats","Directions juridiques","Institutions publiques","Organisations internationales"],
+   sg:"300–800k FCFA/mois",sf:"35 000–70 000€/an",tend:"✅ Secteur stable, forte demande OHADA"},
+  {id:7,ic:"📚",t:"Enseignant / Formateur",s:"Éducation & Formation",bg:"background:linear-gradient(135deg,#1a4a3a,#3a8a6a)",
+   missions:["Conception et animation de cours","Évaluation des apprentissages","Accompagnement et tutorat","Conception de supports pédagogiques"],
+   formations:["Licence + CAPES","Master Sciences de l'Éducation","Formation NTIC pédagogiques"],
+   qualites:["Pédagogie et patience","Capacité d'adaptation","Maîtrise de sa discipline","Enthousiasme communicatif"],
+   debouches:["Établissements scolaires","Universités","Centres de formation","E-learning et EdTech"],
+   sg:"150–350k FCFA/mois",sf:"25 000–45 000€/an",tend:"📈 Fort besoin en formation numérique"},
+  {id:8,ic:"🌿",t:"Agronome / Ingénieur Agricole",s:"Agriculture & Environnement",bg:"background:linear-gradient(135deg,#1a3a1a,#3a6a3a)",
+   missions:["Amélioration des rendements agricoles","Conseil aux exploitants","Études d'impact environnemental","Développement de filières agroalimentaires"],
+   formations:["Bac+5 École d'ingénieurs Agronomie","Master Agriculture / Développement rural","BTS Agronomie + spécialisation tropicale"],
+   qualites:["Passion pour la nature","Rigueur scientifique","Sens du terrain","Adaptation aux contextes ruraux"],
+   debouches:["Ministères de l'Agriculture","ONG de développement rural","Entreprises agroalimentaires","Recherche et Développement"],
+   sg:"250–500k FCFA/mois",sf:"32 000–50 000€/an",tend:"🌱 Secteur stratégique en Afrique"},
+  {id:9,ic:"📣",t:"Chargé de Communication",s:"Communication & Marketing",bg:"background:linear-gradient(135deg,#4a3a1a,#8a6a3a)",
+   missions:["Stratégies de communication","Gestion des réseaux sociaux","Relations presse et médias","Création de contenus"],
+   formations:["Licence ou Master Communication","BTS Communication","École de journalisme ou publicité"],
+   qualites:["Créativité rédactionnelle","Sens du storytelling","Maîtrise des outils digitaux","Réactivité et polyvalence"],
+   debouches:["Agences de communication","Directions communication","Médias et presse","ONG et institutions"],
+   sg:"200–450k FCFA/mois",sf:"28 000–48 000€/an",tend:"🔥 Très forte demande digitale"},
+  {id:10,ic:"🧠",t:"Psychologue / Conseiller",s:"Psychologie & Accompagnement",bg:"background:linear-gradient(135deg,#2a1a3a,#6a3a7a)",
+   missions:["Accompagnement psychologique","Évaluation des profils et aptitudes","Orientation scolaire et professionnelle","Soutien en gestion du stress"],
+   formations:["Master Psychologie (5 ans min)","DU Orientation professionnelle","Certifications coaching ICF"],
+   qualites:["Empathie et neutralité bienveillante","Écoute active","Confidentialité et éthique","Patience et adaptabilité"],
+   debouches:["Hôpitaux et centres de santé","Établissements scolaires","Entreprises (RH)","Cabinet libéral"],
+   sg:"250–550k FCFA/mois",sf:"30 000–55 000€/an",tend:"📈 Forte croissance (santé mentale reconnue)"}
+];
+
+function buildFiches(){
+  var g=document.getElementById("fichesGrid");
+  if(!g) return;
+  g.innerHTML=FICHES.map(function(f){
+    return "<div class='f-card' onclick='openFiche("+f.id+")'><div class='f-hd' style='"+f.bg+"'><div class='f-ico'>"+f.ic+"</div><h3>"+f.t+"</h3></div><div class='f-ft'><span>"+f.s+"</span><span class='f-arr'>→</span></div></div>";
+  }).join("");
+}
+buildFiches();
+
+function openFiche(id){
+  var f=FICHES.find(function(x){return x.id===id;});
+  if(!f) return;
+  var wm=document.getElementById("fWmLogo"); if(wm) wm.src=LOGO;
+  var mis=f.missions.map(function(m){return "<li>"+m+"</li>";}).join("");
+  var fms=f.formations.map(function(m){return "<li>"+m+"</li>";}).join("");
+  var qls=f.qualites.map(function(m){return "<li>"+m+"</li>";}).join("");
+  var dbs=f.debouches.map(function(m){return "<li>"+m+"</li>";}).join("");
+  document.getElementById("ficheContent").innerHTML=
+    "<h2>"+f.ic+" "+f.t+"</h2><div class='f-sub'>"+f.s+"</div>"+
+    "<div class='f-sal'><h4>💰 Rémunération indicative</h4><div class='sal-row'>"+
+    "<div class='sal-it'><div class='sal-n'>"+f.sg+"</div><div class='sal-l'>🇬🇦 Gabon</div></div>"+
+    "<div class='sal-it'><div class='sal-n'>"+f.sf+"</div><div class='sal-l'>🇫🇷 France</div></div></div></div>"+
+    "<div class='f-row'><div class='f-bl'><h4>📋 Missions</h4><ul>"+mis+"</ul></div>"+
+    "<div class='f-bl'><h4>🎓 Formations</h4><ul>"+fms+"</ul></div></div>"+
+    "<div class='f-row'><div class='f-bl'><h4>✨ Qualités</h4><ul>"+qls+"</ul></div>"+
+    "<div class='f-bl'><h4>🏢 Débouchés</h4><ul>"+dbs+"</ul></div></div>"+
+    "<div class='f-bl' style='background:var(--teal-l)'><h4>📈 Tendance marché</h4><p>"+f.tend+"</p></div>"+
+    "<div style='margin-top:16px;text-align:center'><button class='btn-t' style='padding:11px 22px' onclick='closeFiche();go("rdv")'>🤝 Être accompagné dans ce secteur</button></div>";
+  document.getElementById("ficheModal").classList.add("open");
+}
+function closeFiche(){document.getElementById("ficheModal").classList.remove("open");}
+
+// ── TESTS ──
+var TESTS={
+  personnalite:{
+    title:"Test de personnalité", sub:"10 questions — Profil RIASEC",
+    questions:[
+      {q:"Quand vous avez du temps libre, vous préférez :",opts:["Bricoler ou construire quelque chose","Lire ou apprendre de nouvelles choses","Rencontrer et aider des gens","Créer quelque chose (dessin, musique, écriture)"]},
+      {q:"En groupe, vous êtes plutôt :",opts:["Celui qui organise et dirige","Celui qui écoute et soutient","Celui qui analyse et réfléchit","Celui qui propose des idées originales"]},
+      {q:"Votre façon préférée d'apprendre :",opts:["En pratiquant avec les mains","En lisant et en mémorisant","En échangeant avec les autres","En expérimentant librement"]},
+      {q:"Ce qui vous motive le plus dans un travail :",opts:["Construire ou réparer des choses concrètes","Résoudre des problèmes complexes","Aider et accompagner les autres","Exprimer ma créativité"]},
+      {q:"Face à un problème, vous :",opts:["Passez à l'action immédiatement","Analysez méthodiquement avant d'agir","Demandez l'avis de personnes de confiance","Cherchez une solution originale et créative"]},
+      {q:"Vous vous décririez plutôt comme :",opts:["Pratique et concret","Curieux et analytique","Empathique et sociable","Imaginatif et créatif"]},
+      {q:"Dans un projet, votre rôle préféré :",opts:["Réaliser et produire","Planifier et structurer","Motiver et coordonner l'équipe","Générer des idées nouvelles"]},
+      {q:"L'environnement de travail idéal pour vous :",opts:["Sur le terrain, en mouvement","Dans un bureau calme avec données","En contact permanent avec les gens","Dans un espace créatif et stimulant"]},
+      {q:"Votre point fort principal :",opts:["Ma dextérité et mes compétences techniques","Mon intelligence analytique","Mon sens de la relation humaine","Mon sens artistique et créatif"]},
+      {q:"Dans 10 ans, vous vous voyez :",opts:["Dans un métier technique ou manuel de pointe","Spécialiste ou expert dans votre domaine","Dans un métier aide, éducation ou de soin","Avoir créé quelque chose de nouveau"]}
+    ],
+    profiles:[
+      {label:"Profil Réaliste — Le Constructeur 🔨",careers:["Ingénieur BTP","Mécanicien","Géotechnicien","Technicien terrain"],desc:"Vous êtes concret, pratique et aimez travailler avec vos mains et des outils."},
+      {label:"Profil Investigateur — L'Analyste 🔬",careers:["Médecin","Data Analyst","Ingénieur informatique","Économiste"],desc:"Vous êtes curieux, analytique et aimez comprendre comment les choses fonctionnent."},
+      {label:"Profil Social — Le Bienveillant 🤝",careers:["Psychologue","Enseignant","Travailleur social","RH et Formation"],desc:"Vous êtes empathique et aimez aider les autres."},
+      {label:"Profil Artistique — Le Créatif 🎨",careers:["Designer","Architecte","Journaliste","Communicant"],desc:"Vous êtes imaginatif et avez besoin d'exprimer votre créativité."}
+    ]
+  },
+  aptitudes:{
+    title:"Test d'aptitudes", sub:"12 questions — Vos domaines de compétences",
+    questions:[
+      {q:"Résoudre une équation mathématique complexe, c'est pour vous :",opts:["Très facile et plaisant","Possible avec effort","Difficile","Je préfère éviter"]},
+      {q:"Expliquer un concept compliqué simplement :",opts:["Ma spécialité !","Souvent possible","Parfois difficile","Pas mon point fort"]},
+      {q:"Gérer un budget ou un tableau financier :",opts:["Très à l'aise","Correct","Je me débrouille","Difficile pour moi"]},
+      {q:"Concevoir ou dessiner un plan ou un schéma :",opts:["J'adore ça","Je peux le faire","Pas très doué","Vraiment pas mon truc"]},
+      {q:"Coordonner une équipe et gérer des priorités :",opts:["Naturellement","Avec un peu d'effort","Parfois stressant","Je préfère suivre"]},
+      {q:"Apprendre une nouvelle langue ou un nouveau code :",opts:["Rapidement","Progressivement","Lentement","Très difficile"]},
+      {q:"Écrire un texte clair, structuré et convaincant :",opts:["Facilement","Correctement","Avec difficulté","C'est laborieux"]},
+      {q:"Utiliser des outils techniques ou informatiques :",opts:["C'est mon domaine","Je m'en sors bien","Je préfère l'aide","Je galère"]},
+      {q:"Écouter et comprendre les émotions d'une personne :",opts:["Instinctivement","Avec attention","Je dois faire un effort","Pas naturel"]},
+      {q:"Analyser des données et en tirer des conclusions :",opts:["J'adore analyser","Je peux le faire","Pas évident","Je préfère l'intuitif"]},
+      {q:"Organiser un événement ou un projet de A à Z :",opts:["Je suis très organisé(e)","Globalement oui","Parfois chaotique","Je préfère que quelqu'un d'autre"]},
+      {q:"Créer quelque chose de nouveau (produit, concept) :",opts:["Je suis très créatif","J'ai des idées","Pas souvent","Plutôt exécutant"]}
+    ],
+    profiles:[
+      {label:"Aptitudes Logiques et Mathématiques 🧮",careers:["Ingénieur","Data Scientist","Comptable","Chercheur","Développeur"],desc:"Votre cerveau excelle dans le raisonnement logique, les chiffres et la résolution de problèmes."},
+      {label:"Aptitudes Relationnelles et Humaines 💬",careers:["Manager","RH","Psychologue","Commercial","Formateur"],desc:"Vous êtes naturellement doué pour la communication, l'empathie et les relations humaines."},
+      {label:"Aptitudes Techniques et Créatives 🛠️",careers:["Designer","Architecte","Technicien","Développeur","Artisan"],desc:"Vous combinez sens pratique et créativité."},
+      {label:"Aptitudes Managériales 📋",careers:["Chef de projet","Directeur","Consultant","Entrepreneur"],desc:"Vous avez un sens naturel pour organiser, planifier et coordonner des équipes."}
+    ]
+  },
+  interets:{
+    title:"Test d'intérêts professionnels", sub:"10 questions — Trouvez vos secteurs motivants",
+    questions:[
+      {q:"Quel type d'actualité vous passionne le plus ?",opts:["Tech et Innovation","Santé et Sciences","Économie et Finance","Culture et Arts"]},
+      {q:"Si vous deviez regarder une émission :",opts:["Documentaire sur les nouvelles technologies","Reportage médical ou scientifique","Débat économique ou politique","Émission sur le design ou la création"]},
+      {q:"Votre idée d'un travail épanouissant :",opts:["Résoudre des problèmes avec des outils modernes","Contribuer au bien-être des gens","Développer une activité et la faire croître","Créer quelque chose d'esthétique et unique"]},
+      {q:"Si vous aviez une semaine pour apprendre :",opts:["La programmation ou l'IA","Les premiers secours ou la biologie","L'investissement ou le business","La photographie ou la musique"]},
+      {q:"Le sujet de votre mémoire idéal :",opts:["Intelligence artificielle et emploi","Système de santé en Afrique","Développement économique du Gabon","Patrimoine culturel et identité africaine"]},
+      {q:"Quel problème du monde vous touche le plus ?",opts:["Le fossé technologique","Les inégalités d'accès aux soins","La pauvreté et le chômage","La disparition de la culture locale"]},
+      {q:"Votre réseau idéal serait composé de :",opts:["Ingénieurs, développeurs, startuppers","Médecins, chercheurs, biologistes","Entrepreneurs, investisseurs, économistes","Artistes, designers, créatifs"]},
+      {q:"Dans 5 ans, votre impact idéal serait :",opts:["Avoir développé un outil numérique utile","Avoir soigné ou formé des centaines de personnes","Avoir créé des emplois ou une entreprise","Avoir produit une oeuvre reconnue"]},
+      {q:"Votre manière de contribuer à la société :",opts:["Par l'innovation et la technologie","Par le soin et l'éducation","Par l'économie et l'entrepreneuriat","Par l'art et la culture"]},
+      {q:"Le secteur dans lequel vous vous imaginez travailler :",opts:["Numérique et Tech","Santé et Social","Finance et Commerce","Culture et Communication"]}
+    ],
+    profiles:[
+      {label:"Secteur Numérique et Technologie 💻",careers:["Développeur","Data Analyst","Chef de projet IT","Cybersécurité"],desc:"Vous êtes passionné par l'innovation numérique. Le secteur digital est en plein boom en Afrique."},
+      {label:"Secteur Santé et Sciences Humaines ❤️",careers:["Médecin","Infirmier","Psychologue","Chercheur","Travailleur social"],desc:"Vous êtes motivé par le bien-être humain et les sciences."},
+      {label:"Secteur Économie et Entrepreneuriat 📈",careers:["Entrepreneur","Consultant","Directeur financier","Commercial"],desc:"Vous êtes attiré par le business, l'économie et la création de valeur."},
+      {label:"Secteur Culture et Communication 🎭",careers:["Communicant","Designer","Journaliste","Artiste"],desc:"Vous vous épanouissez dans la créativité, l'expression et le partage."}
+    ]
+  }
+};
+
+var currentTest=null, currentQ=0, answers=[];
+
+function openTest(id){
+  var t=TESTS[id];
+  if(!t) return;
+  currentTest=id; currentQ=0; answers=new Array(t.questions.length).fill(-1);
+  document.getElementById("tTitle").textContent=t.title;
+  document.getElementById("tSub").textContent=t.sub;
+  renderQ();
+  document.getElementById("testModal").classList.add("open");
+}
+
+function renderQ(){
+  var t=TESTS[currentTest]; if(!t) return;
+  var pct=Math.round((currentQ/t.questions.length)*100);
+  document.getElementById("progBar").style.width=pct+"%";
+  document.getElementById("tResult").classList.add("hidden");
+  document.getElementById("tContent").innerHTML="";
+  var q=t.questions[currentQ];
+  var div=document.createElement("div");
+  div.className="q-item";
+  div.innerHTML="<h4>Question "+(currentQ+1)+"/"+t.questions.length+" — "+q.q+"</h4><div class='q-opts'>"+
+    q.opts.map(function(o,i){return "<div class='q-opt"+(answers[currentQ]===i?" sel":"")+"' onclick='selOpt("+i+",this)'>"+o+"</div>";}).join("")+
+    "</div>";
+  document.getElementById("tContent").appendChild(div);
+  document.getElementById("prevBtn").style.display=currentQ>0?"inline-block":"none";
+  document.getElementById("nextBtn").textContent=currentQ===t.questions.length-1?"Voir mes résultats":"Suivant →";
+  document.getElementById("nextBtn").onclick=nextQ;
+}
+
+function selOpt(i,el){
+  answers[currentQ]=i;
+  document.querySelectorAll(".q-opt").forEach(function(o){o.classList.remove("sel");});
+  el.classList.add("sel");
+}
+
+function prevQ(){if(currentQ>0){currentQ--;renderQ();}}
+
+function nextQ(){
+  var t=TESTS[currentTest];
+  if(answers[currentQ]===-1){alert("Veuillez choisir une réponse.");return;}
+  if(currentQ<t.questions.length-1){currentQ++;renderQ();}
+  else showResult();
+}
+
+function showResult(){
+  var t=TESTS[currentTest];
+  var counts=[0,0,0,0];
+  answers.forEach(function(a){if(a>=0&&a<4)counts[a]++;});
+  var maxIdx=counts.indexOf(Math.max.apply(null,counts));
+  var p=t.profiles[maxIdx];
+  document.getElementById("progBar").style.width="100%";
+  document.getElementById("tContent").innerHTML="";
+  document.getElementById("prevBtn").style.display="none";
+  document.getElementById("nextBtn").textContent="Fermer";
+  document.getElementById("nextBtn").onclick=closeTest;
+  var res=document.getElementById("tResult");
+  res.classList.remove("hidden");
+  res.innerHTML="<div class='res-box'><div class='big'>🎉</div><h3>"+p.label+"</h3><p>"+p.desc+"</p>"+
+    "<div style='margin-top:10px;font-size:12px;font-weight:600;color:var(--navy)'>Métiers recommandés :</div>"+
+    "<div class='res-careers'>"+p.careers.map(function(c){return "<span>"+c+"</span>";}).join("")+"</div>"+
+    "<div style='margin-top:14px;padding:12px;background:rgba(75,191,176,.15);border-radius:10px'>"+
+    "<p style='font-size:12px;color:var(--navy)'>✨ Ces résultats sont inclus dans votre dossier lors d'une session avec un professionnel Oyeri.</p></div>"+
+    "<button class='btn-t' style='margin-top:12px;padding:10px 20px' onclick='clos
